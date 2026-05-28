@@ -455,6 +455,10 @@ p { color: var(--muted); line-height: 1.65; }
   background-size: cover;
   background-position: center;
 }
+.post-card {
+  color: #fff;
+  text-decoration: none;
+}
 .feature-photo {
   display: flex;
   align-items: flex-end;
@@ -3910,9 +3914,16 @@ function renderApiPreviewPosts(posts, platform) {
 
   thumbs.replaceChildren(...rows.slice(0, 3).map((post, index) => {
     const label = post.label || (platform === "tiktok" ? "TT" : "IG");
-    const card = document.createElement("article");
+    const card = document.createElement(post.url ? "a" : "article");
     card.className = "post-card";
     card.dataset.platform = platform;
+    if (post.url) {
+      card.href = post.url;
+      card.target = "_blank";
+      card.rel = "noopener noreferrer";
+      card.setAttribute("aria-label", `Open ${label} post for ${post.views || "preview"} views`);
+      card.title = "Open post";
+    }
     if (post.image) {
       card.style.setProperty("--portrait", `linear-gradient(0deg, rgba(0,0,0,.34), rgba(0,0,0,.08)), url("${post.image}")`);
     } else {
