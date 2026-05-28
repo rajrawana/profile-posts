@@ -4247,6 +4247,18 @@ function wireEvents() {
     const focusPreview = event.target.closest("[data-focus-preview]");
     const previewPlatform = event.target.closest("[data-preview-platform]");
 
+    if (embedCard) {
+      event.preventDefault();
+      openMediaModal(embedCard.dataset.embedUrl, embedCard.dataset.embedPlatform);
+      return;
+    }
+
+    if (closeMedia) {
+      event.preventDefault();
+      closeMediaModal();
+      return;
+    }
+
     if (pageLink) {
       event.preventDefault();
       showPage(pageLink.dataset.pageLink);
@@ -4425,14 +4437,3 @@ setTimeout(syncActiveNavFromScroll, 300);
 
 
 </body><div id="codex-browser-sidebar-comments-root" style="position: fixed; inset: 0px; pointer-events: none; z-index: 2147483000;"></div></html>
-    if (embedCard) {
-      event.preventDefault();
-      openMediaModal(embedCard.dataset.embedUrl, embedCard.dataset.embedPlatform);
-      return;
-    }
-
-    if (closeMedia) {
-      event.preventDefault();
-      closeMediaModal();
-      return;
-    }
