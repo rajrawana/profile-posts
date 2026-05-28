@@ -2001,6 +2001,72 @@ dd { margin: 0; color: #fff; }
 }
 .toast.is-visible { transform: translate(-50%, 0); }
 
+.media-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: none;
+  place-items: center;
+  padding: 22px;
+  background: rgba(0, 0, 0, .82);
+  backdrop-filter: blur(10px);
+}
+.media-modal.is-open {
+  display: grid;
+}
+.media-modal__panel {
+  width: min(540px, 100%);
+  max-height: min(860px, calc(100vh - 44px));
+  overflow: auto;
+  padding: 14px;
+  background: #050508;
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(255,0,95,.32);
+}
+.media-modal__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.media-modal__top b {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.media-modal__close {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  color: #fff;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius: 6px;
+  font-size: 24px;
+  line-height: 1;
+}
+.media-modal__body {
+  display: grid;
+  place-items: center;
+  min-height: 360px;
+}
+.media-modal__body iframe,
+.media-modal__body blockquote,
+.media-modal__body .instagram-media,
+.media-modal__body .tiktok-embed {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 auto !important;
+}
+.media-modal__fallback {
+  display: grid;
+  gap: 12px;
+  text-align: center;
+}
+
 /* Premium finish */
 body::before {
   content: "";
@@ -3492,6 +3558,15 @@ p {
   </div>
 
   <div class="toast" role="status" aria-live="polite"></div>
+  <div class="media-modal" data-media-modal="" aria-hidden="true">
+    <div class="media-modal__panel" role="dialog" aria-modal="true" aria-label="Post preview">
+      <div class="media-modal__top">
+        <b data-media-modal-title="">Post preview</b>
+        <button class="media-modal__close" type="button" data-close-media="" aria-label="Close preview">&times;</button>
+      </div>
+      <div class="media-modal__body" data-media-modal-body=""></div>
+    </div>
+  </div>
 
   <script>
 const state = {
@@ -3914,15 +3989,15 @@ function renderApiPreviewPosts(posts, platform) {
 
   thumbs.replaceChildren(...rows.slice(0, 3).map((post, index) => {
     const label = post.label || (platform === "tiktok" ? "TT" : "IG");
-    const card = document.createElement(post.url ? "a" : "article");
+    const card = document.createElement("button");
+    card.type = "button";
     card.className = "post-card";
     card.dataset.platform = platform;
     if (post.url) {
-      card.href = post.url;
-      card.target = "_blank";
-      card.rel = "noopener noreferrer";
-      card.setAttribute("aria-label", `Open ${label} post for ${post.views || "preview"} views`);
-      card.title = "Open post";
+      card.dataset.embedUrl = post.url;
+      card.dataset.embedPlatform = platform;
+      card.setAttribute("aria-label", `Watch ${label} post in browser`);
+      card.title = "Watch post";
     }
     if (post.image) {
       card.style.setProperty("--portrait", `linear-gradient(0deg, rgba(0,0,0,.34), rgba(0,0,0,.08)), url("${post.image}")`);
@@ -3932,6 +4007,81 @@ function renderApiPreviewPosts(posts, platform) {
     card.innerHTML = `<small aria-label="${platform}">${label}</small><b>${post.views || ""}</b><b>${post.likes || ""}</b>`;
     return card;
   }));
+}
+
+function shortcodeFromInstagramUrl(url) {
+  try {
+    const parsed = new URL(url);
+    const parts = parsed.pathname.split("/").filter(Boolean);
+    const index = parts.findIndex((part) => ["p", "reel", "tv"].includes(part));
+    return index >= 0 ? parts[index + 1] : "";
+  } catch (error) {
+    return "";
+  }
+}
+
+function tiktokVideoIdFromUrl(url) {
+  try {
+    const match = new URL(url).pathname.match(/\/video\/(\d+)/);
+    return match?.[1] || "";
+  } catch (error) {
+    return "";
+  }
+}
+
+function ensureEmbedScript(src, test) {
+  if (test()) return Promise.resolve();
+  const existing = document.querySelector(`script[src="${src}"]`);
+  if (existing) {
+    return new Promise((resolve) => {
+      existing.addEventListener("load", resolve, { once: true });
+      setTimeout(resolve, 1200);
+    });
+  }
+  return new Promise((resolve) => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = src;
+    script.onload = resolve;
+    document.body.appendChild(script);
+  });
+}
+
+function closeMediaModal() {
+  const modal = document.querySelector("[data-media-modal]");
+  const body = document.querySelector("[data-media-modal-body]");
+  modal?.classList.remove("is-open");
+  modal?.setAttribute("aria-hidden", "true");
+  if (body) body.innerHTML = "";
+}
+
+async function openMediaModal(url, platform) {
+  const modal = document.querySelector("[data-media-modal]");
+  const body = document.querySelector("[data-media-modal-body]");
+  const title = document.querySelector("[data-media-modal-title]");
+  if (!modal || !body) return;
+
+  const cleanPlatform = platform === "tiktok" ? "tiktok" : "instagram";
+  title.textContent = cleanPlatform === "tiktok" ? "TikTok preview" : "Instagram preview";
+  body.innerHTML = `<div class="media-modal__fallback"><b>Loading post...</b><small>Public posts open inside this preview when the platform allows embeds.</small></div>`;
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+
+  if (cleanPlatform === "tiktok") {
+    const videoId = tiktokVideoIdFromUrl(url);
+    body.innerHTML = `
+      <blockquote class="tiktok-embed" cite="${url}" data-video-id="${videoId}" style="max-width: 605px;min-width: 325px;">
+        <section><a target="_blank" rel="noopener noreferrer" href="${url}">Watch on TikTok</a></section>
+      </blockquote>
+    `;
+    await ensureEmbedScript("https://www.tiktok.com/embed.js", () => Boolean(window.tiktokEmbed));
+    window.tiktokEmbed?.load?.();
+    return;
+  }
+
+  const shortcode = shortcodeFromInstagramUrl(url);
+  const embedUrl = shortcode ? `https://www.instagram.com/p/${shortcode}/embed/captioned/` : `${url.replace(/\/?$/, "/")}embed/captioned/`;
+  body.innerHTML = `<iframe src="${embedUrl}" title="Instagram post preview" width="400" height="560" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen></iframe>`;
 }
 
 function applyPreviewData(data, handle, platform) {
@@ -4088,6 +4238,8 @@ async function submitNetlifyForm(form, statusSelector, successMessage) {
 
 function wireEvents() {
   document.addEventListener("click", (event) => {
+    const embedCard = event.target.closest("[data-embed-url]");
+    const closeMedia = event.target.closest("[data-close-media]");
     const pageLink = event.target.closest("[data-page-link]");
     const scrollTarget = event.target.closest("[data-scroll-target]");
     const filter = event.target.closest("[data-filter]");
@@ -4273,3 +4425,14 @@ setTimeout(syncActiveNavFromScroll, 300);
 
 
 </body><div id="codex-browser-sidebar-comments-root" style="position: fixed; inset: 0px; pointer-events: none; z-index: 2147483000;"></div></html>
+    if (embedCard) {
+      event.preventDefault();
+      openMediaModal(embedCard.dataset.embedUrl, embedCard.dataset.embedPlatform);
+      return;
+    }
+
+    if (closeMedia) {
+      event.preventDefault();
+      closeMediaModal();
+      return;
+    }
