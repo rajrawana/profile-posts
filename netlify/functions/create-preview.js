@@ -29,6 +29,9 @@ const firstString = (...values) =>
 const firstNumber = (...values) =>
   values.find((value) => Number.isFinite(Number(value))) || 0;
 
+const proxyImage = (url) =>
+  url ? `/.netlify/functions/image-proxy?url=${encodeURIComponent(url)}` : "";
+
 const mediaUrlFrom = (item) => {
   if (!item || typeof item !== "object") return "";
   if (Array.isArray(item.images) && item.images[0]) return firstString(item.images[0], item.images[0]?.url);
@@ -50,7 +53,7 @@ const mediaUrlFrom = (item) => {
 const postFromInstagram = (item) => ({
   platform: "instagram",
   label: "IG",
-  image: mediaUrlFrom(item),
+  image: proxyImage(mediaUrlFrom(item)),
   url: firstString(item.url, item.shortCode ? `https://www.instagram.com/p/${item.shortCode}/` : ""),
   views: compactNumber(firstNumber(item.videoViewCount, item.videoPlayCount, item.views)),
   likes: compactNumber(firstNumber(item.likesCount, item.likes)),
@@ -59,7 +62,7 @@ const postFromInstagram = (item) => ({
 const postFromTikTok = (item) => ({
   platform: "tiktok",
   label: "TT",
-  image: mediaUrlFrom(item),
+  image: proxyImage(mediaUrlFrom(item)),
   url: firstString(item.webVideoUrl, item.url),
   views: compactNumber(firstNumber(item.playCount, item.play_count, item.stats?.playCount)),
   likes: compactNumber(firstNumber(item.diggCount, item.likes, item.stats?.diggCount)),
@@ -71,7 +74,7 @@ const profileFrom = (items, handle, platform) => {
   const user = first.user || {};
   const username = firstString(first.ownerUsername, first.username, author.name, user.uniqueId, handle);
   const displayName = firstString(first.fullName, first.ownerFullName, author.nickName, user.nickname, username);
-  const avatar = firstString(first.profilePicUrl, first.ownerProfilePicUrl, author.avatar, user.avatarLarger, user.avatarMedium);
+  const avatar = proxyImage(firstString(first.profilePicUrl, first.ownerProfilePicUrl, author.avatar, user.avatarLarger, user.avatarMedium));
   const bio = firstString(first.biography, first.bio, author.signature, user.signature);
 
   return {
