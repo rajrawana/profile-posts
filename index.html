@@ -1,0 +1,4264 @@
+<html lang="en" style="--portrait: radial-gradient(circle at 54% 22%, #ffd5bd 0 8%, transparent 9%), radial-gradient(circle at 60% 26%, rgba(255,255,255,.24), transparent 7%), linear-gradient(115deg, #15090b, #8a4b2d 28%, #171018 29% 55%, #d79058 56% 78%, #211014 79% 100%);"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile Posts+ Creator Media Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #000003;
+  --panel: #08080d;
+  --panel-2: #101017;
+  --text: #ffffff;
+  --muted: #f1edf5;
+  --line: rgba(255, 255, 255, .32);
+  --pink: #ff005f;
+  --pink-2: #ff207d;
+  --pink-3: #ff70b2;
+  --purple: #b640ff;
+  --blue: #168dff;
+  --green: #86ff45;
+  --orange: #ff861f;
+  --cyan: #19edff;
+  --radius: 8px;
+  --shadow: 0 0 30px rgba(255, 0, 106, .24), 0 0 70px rgba(255, 0, 106, .08);
+}
+
+* { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 22% -8%, rgba(255, 0, 95, .18), transparent 30rem),
+    radial-gradient(circle at 85% 10%, rgba(25, 237, 255, .1), transparent 28rem),
+    linear-gradient(180deg, #000 0%, #010102 28%, #000 100%);
+  color: var(--text);
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 500;
+}
+
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+
+.site-shell {
+  width: min(1420px, calc(100% - 32px));
+  margin: 18px auto 64px;
+}
+
+.topbar {
+  position: relative;
+  top: auto;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 220px 1fr auto;
+  align-items: center;
+  min-height: 70px;
+  padding: 10px 18px;
+  background:
+    linear-gradient(180deg, rgba(7, 7, 10, .99), rgba(0, 0, 2, .99)),
+    radial-gradient(circle at 82% 50%, rgba(255, 0, 95, .18), transparent 24rem);
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: var(--radius);
+  box-shadow: 0 0 28px rgba(255, 0, 95, .16), 0 0 70px rgba(0, 0, 0, .7);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  width: max-content;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: .82;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+.brand strong { color: var(--pink); }
+.brand strong,
+em {
+  text-shadow: 0 0 18px rgba(255, 0, 106, .62);
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: clamp(18px, 3vw, 52px);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.main-nav a {
+  padding: 12px 2px;
+  border-bottom: 2px solid transparent;
+}
+.main-nav a:hover,
+.main-nav a.is-active {
+  color: #fff;
+  border-color: var(--pink);
+  text-shadow: 0 0 14px rgba(255, 0, 106, .7);
+}
+
+.menu-toggle { display: none; }
+.icon-button {
+  border: 1px solid var(--line);
+  background: #08080b;
+  color: #fff;
+  border-radius: 6px;
+  min-width: 42px;
+  min-height: 42px;
+}
+.menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 4px auto;
+  background: #fff;
+}
+
+.page { display: none; }
+.page.is-active { display: block; }
+
+.framed {
+  position: relative;
+  margin-top: 14px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.048), rgba(0,0,0,.66)),
+    radial-gradient(circle at 16% 0%, rgba(255, 0, 95, .1), transparent 28rem),
+    #030305;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), var(--shadow);
+}
+.purple-frame,
+.blue-frame,
+.green-frame,
+.orange-frame,
+.cyan-frame,
+.pink-frame {
+  border-color: rgba(255, 255, 255, .22);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.055), 0 0 34px rgba(255,0,95,.1);
+}
+
+.hero,
+.pricing-hero {
+  min-height: 370px;
+  padding: clamp(28px, 3vw, 42px);
+}
+.grid-hero {
+  display: grid;
+  grid-template-columns: minmax(280px, .72fr) minmax(420px, 1.15fr);
+  gap: 30px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.eyebrow span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 0 0 14px var(--pink);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+h1 {
+  max-width: 650px;
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: .9;
+}
+h2 { font-size: clamp(30px, 4vw, 48px); line-height: .95; }
+h3 { font-size: 19px; line-height: 1.05; }
+em { color: var(--pink); font-style: normal; }
+p { color: var(--muted); line-height: 1.65; }
+.hero-copy p:not(.eyebrow), .analytics-hero p, .demo-hero p, .pricing-copy p {
+  max-width: 560px;
+  font-size: 17px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 26px;
+}
+.preview-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  width: min(100%, 560px);
+  margin-top: 22px;
+}
+.preview-form label {
+  display: grid;
+  gap: 6px;
+}
+.preview-form span {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.preview-form input {
+  min-height: 56px;
+  width: 100%;
+  padding: 0 16px;
+  color: #fff;
+  background: rgba(0,0,0,.76);
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04), 0 0 22px rgba(255,0,106,.12);
+}
+.preview-form input:focus {
+  outline: 2px solid rgba(255,0,95,.42);
+  border-color: var(--pink);
+}
+.preview-form .btn {
+  align-self: end;
+  white-space: nowrap;
+}
+.preview-platforms,
+.preview-status {
+  grid-column: 1 / -1;
+}
+.preview-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.platform-choice {
+  min-height: 38px;
+  padding: 0 14px;
+  color: #fff;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.platform-choice.is-selected {
+  color: #050508;
+  background: var(--cyan);
+  border-color: transparent;
+  box-shadow: 0 0 22px rgba(25,237,255,.28);
+}
+.preview-status {
+  display: none;
+  gap: 12px;
+  align-items: center;
+  min-height: 58px;
+  padding: 12px 14px;
+  color: #fff;
+  background: rgba(255,255,255,.055);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 6px;
+}
+.preview-status.is-visible {
+  display: flex;
+}
+.preview-status::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(255,255,255,.18);
+  border-top-color: var(--pink);
+  border-radius: 50%;
+  animation: preview-spin .8s linear infinite;
+}
+.preview-status.is-ready::before {
+  border-color: var(--cyan);
+  background: radial-gradient(circle, var(--cyan) 0 28%, transparent 30%);
+  animation: none;
+}
+.preview-status b {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.preview-status small {
+  color: var(--muted);
+  font-size: 12px;
+}
+@keyframes preview-spin {
+  to { transform: rotate(360deg); }
+}
+.preview-actions {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.preview-actions.is-visible {
+  display: none;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 5px;
+  border: 1px solid var(--line);
+  background: #09090c;
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+.btn:hover { transform: translateY(-1px); border-color: currentColor; }
+.btn-primary {
+  border-color: rgba(255,255,255,.18);
+  background: linear-gradient(180deg, var(--pink-2), var(--pink) 54%, #dd0059);
+  box-shadow: 0 0 20px rgba(255, 0, 106, .55), 0 0 48px rgba(255, 0, 106, .18);
+}
+.btn-outline {
+  background: rgba(0,0,0,.74);
+  border-color: rgba(255,255,255,.46);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
+}
+.btn-cyan {
+  width: 100%;
+  background: linear-gradient(180deg, var(--pink-2), var(--pink));
+  border-color: transparent;
+}
+.btn.small {
+  min-height: 40px;
+  padding: 0 18px;
+  font-size: 12px;
+}
+.play-dot {
+  width: 17px;
+  height: 17px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.play-dot::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  border-left: 5px solid #fff;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.creator-laptop {
+  padding: 16px 16px 34px;
+  background: linear-gradient(#101018, #020204);
+  border: 1px solid rgba(255,255,255,.42);
+  border-radius: 14px 14px 4px 4px;
+  box-shadow: 0 28px 0 -18px #575766, 0 34px 0 -24px #181820, 0 0 38px rgba(255,0,106,.22);
+}
+.creator-laptop.is-loading .profile-panel {
+  opacity: .62;
+  filter: saturate(.7);
+}
+.creator-laptop.is-ready {
+  border-color: rgba(25,237,255,.72);
+  box-shadow: 0 28px 0 -18px #575766, 0 34px 0 -24px #181820, 0 0 38px rgba(25,237,255,.26), 0 0 74px rgba(255,0,106,.16);
+}
+.profile-panel {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 18px;
+  min-height: 340px;
+}
+.profile-card {
+  display: grid;
+  align-content: start;
+  gap: 13px;
+  padding: 22px 26px 22px 22px;
+  border-right: 1px solid rgba(255,255,255,.12);
+}
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: var(--portrait);
+  background-size: cover;
+  background-position: center;
+}
+.profile-card h3 span,
+.creator-nav b span {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 0 0 8px var(--pink);
+}
+.profile-card p { margin: 0; font-size: 12px; }
+.mini-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  color: var(--pink);
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(255,0,106,.45);
+}
+.mini-stats small {
+  display: block;
+  margin-top: 4px;
+  color: #fff;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+.media-preview {
+  display: grid;
+  grid-template-rows: 42px 1fr auto;
+  min-width: 0;
+}
+.creator-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.creator-nav button {
+  color: #fff;
+  background: none;
+  border: 0;
+  font-weight: 900;
+}
+.feature-photo,
+.post-card,
+.wide-device,
+.phone-device {
+  background: var(--portrait);
+  background-size: cover;
+  background-position: center;
+}
+.feature-photo {
+  display: flex;
+  align-items: flex-end;
+  min-height: 190px;
+  padding: 26px 26px 34px;
+  border-radius: 4px;
+  overflow: hidden;
+  isolation: isolate;
+  position: relative;
+}
+.feature-photo > div {
+  display: grid;
+  gap: 18px;
+}
+.feature-photo .btn.small {
+  justify-self: start;
+}
+.feature-photo::before,
+.post-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.74), rgba(0,0,0,.1));
+  z-index: -1;
+}
+.feature-photo h2 {
+  max-width: 290px;
+  margin: 0;
+  font-size: 36px;
+}
+.feature-photo .btn.small {
+  margin-top: 8px;
+}
+.profile-note {
+  display: grid;
+  place-items: center;
+  min-height: 46px;
+  padding: 0 14px;
+  border: 1px solid rgba(255,255,255,.26);
+  border-radius: 5px;
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba(255,0,95,.08);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04), 0 0 18px rgba(255,0,95,.16);
+}
+.sample-disclaimer {
+  margin: 8px 0 0;
+  color: rgba(255,255,255,.68);
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.latest-strip {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  margin-top: 14px;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.latest-strip a { color: var(--pink); }
+.thumb-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  align-items: stretch;
+}
+.thumb-row .post-card {
+  min-height: 104px;
+  min-width: 0;
+  border-radius: 4px;
+}
+
+[data-icon] {
+  display: inline-grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 54px;
+  height: 44px;
+  color: var(--pink);
+  font-style: normal;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+  border: 1px solid rgba(255, 0, 95, .68);
+  border-radius: 6px;
+  background: rgba(255, 0, 95, .07);
+  text-shadow: 0 0 16px rgba(255, 0, 106, .86), 0 0 34px rgba(255, 0, 106, .32);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04), 0 0 18px rgba(255,0,95,.18);
+}
+[data-icon]::before,
+[data-icon]::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+[data-icon]::before {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--pink);
+  border-radius: 50%;
+  box-shadow: 0 0 18px rgba(255,0,106,.48);
+}
+[data-icon]::after {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 0 0 14px rgba(255,0,106,.85);
+}
+[data-icon="shield"]::before,
+[data-icon="award"]::before,
+[data-icon="gift"]::before,
+[data-icon="set"]::before {
+  border-radius: 4px;
+  transform: rotate(45deg);
+}
+[data-icon="shield"]::before {
+  width: 22px;
+  height: 26px;
+  border-radius: 12px 12px 8px 8px;
+  clip-path: polygon(50% 0, 100% 18%, 88% 72%, 50% 100%, 12% 72%, 0 18%);
+}
+[data-icon="shield"]::after {
+  width: 10px;
+  height: 5px;
+  border: 2px solid var(--pink);
+  border-top: 0;
+  border-right: 0;
+  border-radius: 0;
+  background: transparent;
+  transform: rotate(-45deg);
+}
+[data-icon="screen"]::before {
+  left: 50%;
+  top: 11px;
+  width: 28px;
+  height: 18px;
+  border: 2px solid var(--pink);
+  border-radius: 4px;
+  background: linear-gradient(180deg, rgba(255, 0, 95, .16), rgba(255, 255, 255, .03));
+  box-shadow: 0 0 18px rgba(255,0,106,.5);
+  transform: translateX(-50%);
+}
+[data-icon="screen"]::after {
+  left: 50%;
+  top: 30px;
+  width: 18px;
+  height: 8px;
+  border: 0;
+  border-bottom: 2px solid var(--pink);
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: 0 8px 12px rgba(255,0,106,.24);
+  transform: translateX(-50%);
+}
+[data-icon="lock"]::before {
+  left: 50%;
+  top: 20px;
+  width: 24px;
+  height: 18px;
+  border: 2px solid var(--pink);
+  border-radius: 4px;
+  background: linear-gradient(180deg, rgba(255, 0, 95, .14), rgba(255, 255, 255, .02));
+  box-shadow: 0 0 18px rgba(255,0,106,.5);
+  transform: translateX(-50%);
+}
+[data-icon="lock"]::after {
+  left: 50%;
+  top: 9px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--pink);
+  border-bottom: 0;
+  border-radius: 12px 12px 0 0;
+  background: transparent;
+  box-shadow: none;
+  transform: translateX(-50%);
+}
+[data-icon="contract"]::before {
+  left: 50%;
+  top: 9px;
+  width: 24px;
+  height: 28px;
+  border: 2px solid var(--pink);
+  border-radius: 3px;
+  background:
+    linear-gradient(90deg, transparent 0 28%, var(--pink) 28% 72%, transparent 72%) 50% 38% / 14px 2px no-repeat,
+    linear-gradient(90deg, transparent 0 28%, var(--pink) 28% 72%, transparent 72%) 50% 58% / 14px 2px no-repeat,
+    rgba(255, 0, 95, .08);
+  box-shadow: 0 0 18px rgba(255,0,106,.48);
+  transform: translateX(-50%);
+}
+[data-icon="contract"]::after {
+  right: 13px;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-left: 2px solid var(--pink);
+  border-bottom: 2px solid var(--pink);
+  border-radius: 0;
+  background: rgba(255, 0, 95, .14);
+  box-shadow: none;
+}
+[data-icon="inclusive"]::before {
+  left: 50%;
+  top: 14px;
+  width: 28px;
+  height: 20px;
+  border: 2px solid var(--pink);
+  border-radius: 5px;
+  background: rgba(255, 0, 95, .08);
+  box-shadow: 0 0 18px rgba(255,0,106,.48);
+  transform: translateX(-50%);
+}
+[data-icon="inclusive"]::after {
+  right: 12px;
+  top: 13px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--pink);
+  border-radius: 50%;
+  background: var(--bg);
+}
+[data-icon="discover"]::before {
+  left: 45%;
+  top: 11px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--pink);
+  border-radius: 50%;
+  background: rgba(255, 0, 95, .06);
+  box-shadow: 0 0 18px rgba(255,0,106,.48);
+  transform: translateX(-50%);
+}
+[data-icon="discover"]::after {
+  left: 31px;
+  top: 28px;
+  width: 13px;
+  height: 2px;
+  border: 0;
+  border-radius: 2px;
+  background: var(--pink);
+  box-shadow: 0 0 14px rgba(255,0,106,.85);
+  transform: rotate(45deg);
+}
+[data-icon="calendar"]::before {
+  left: 50%;
+  top: 12px;
+  width: 28px;
+  height: 24px;
+  border: 2px solid var(--pink);
+  border-radius: 4px;
+  background:
+    linear-gradient(var(--pink), var(--pink)) 0 7px / 100% 2px no-repeat,
+    rgba(255, 0, 95, .08);
+  box-shadow: 0 0 18px rgba(255,0,106,.48);
+  transform: translateX(-50%);
+}
+[data-icon="calendar"]::after {
+  left: 50%;
+  top: 25px;
+  width: 6px;
+  height: 6px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 0 0 14px rgba(255,0,106,.85);
+  transform: translateX(-50%);
+}
+[data-icon="trend"]::before {
+  left: 14px;
+  top: 24px;
+  width: 28px;
+  height: 14px;
+  border: 0;
+  border-left: 3px solid var(--pink);
+  border-top: 3px solid var(--pink);
+  border-radius: 0;
+  box-shadow: 0 0 16px rgba(255,0,106,.42);
+  transform: skewY(-26deg);
+}
+[data-icon="trend"]::after {
+  right: 12px;
+  top: 13px;
+  width: 9px;
+  height: 9px;
+  border: 0;
+  border-top: 3px solid var(--pink);
+  border-right: 3px solid var(--pink);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: rotate(45deg);
+}
+[data-icon="heart"]::before {
+  left: 50%;
+  top: 16px;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--pink);
+  border-top: 0;
+  border-left: 0;
+  border-radius: 3px 8px 3px 8px;
+  background: rgba(255, 0, 95, .07);
+  box-shadow: 0 0 18px rgba(255,0,106,.48);
+  transform: translateX(-50%) rotate(45deg);
+}
+[data-icon="heart"]::after {
+  left: 50%;
+  top: 17px;
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 0 0 14px rgba(255,0,106,.85);
+  transform: translateX(-50%);
+}
+[data-icon="globe"]::before {
+  left: 50%;
+  top: 10px;
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--pink);
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent 45%, var(--pink) 45% 55%, transparent 55%),
+    linear-gradient(transparent 45%, var(--pink) 45% 55%, transparent 55%);
+  box-shadow: 0 0 18px rgba(255,0,106,.48);
+  transform: translateX(-50%);
+}
+[data-icon="globe"]::after {
+  left: 50%;
+  top: 10px;
+  width: 10px;
+  height: 26px;
+  border: 2px solid var(--pink);
+  border-top: 0;
+  border-bottom: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  transform: translateX(-50%);
+}
+[data-icon="spark"]::before {
+  left: 50%;
+  top: 9px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 0;
+  background: var(--pink);
+  clip-path: polygon(50% 0, 61% 36%, 100% 50%, 61% 64%, 50% 100%, 39% 64%, 0 50%, 39% 36%);
+  box-shadow: 0 0 18px rgba(255,0,106,.48);
+  transform: translateX(-50%);
+}
+[data-icon="spark"]::after {
+  left: 50%;
+  top: 18px;
+  width: 6px;
+  height: 6px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--bg);
+  box-shadow: none;
+  transform: translateX(-50%);
+}
+[data-icon="puzzle"]::before {
+  width: 23px;
+  height: 23px;
+  border-radius: 5px;
+}
+[data-icon="puzzle"]::after {
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--pink);
+  border-radius: 50%;
+  background: transparent;
+  right: 12px;
+}
+[data-icon="chart"]::before,
+[data-icon="arrow"]::before,
+[data-icon="bolt"]::before {
+  width: 24px;
+  height: 13px;
+  border-width: 0 2px 2px 0;
+  border-radius: 0;
+  transform: rotate(-35deg);
+}
+[data-icon="bars"]::before {
+  width: 26px;
+  height: 22px;
+  border: 0;
+  border-radius: 2px;
+  background:
+    linear-gradient(90deg, transparent 0 12%, var(--pink) 12% 25%, transparent 25% 38%, var(--pink) 38% 51%, transparent 51% 64%, var(--pink) 64% 77%, transparent 77%);
+}
+[data-icon="support"]::before,
+[data-icon="phone"]::before {
+  width: 24px;
+  height: 15px;
+  border-radius: 14px 14px 6px 6px;
+}
+[data-icon="users"]::after,
+[data-icon="user"]::after {
+  width: 24px;
+  height: 10px;
+  border: 2px solid var(--pink);
+  border-top: 0;
+  border-radius: 0 0 18px 18px;
+  background: transparent;
+  bottom: 10px;
+}
+[data-icon]::before,
+[data-icon]::after {
+  display: none !important;
+}
+.icon-svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 12px rgba(255,0,106,.72));
+}
+
+.mini-feature-row,
+.trust-strip,
+.feature-highlights {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  padding: 22px 28px;
+}
+.mini-feature-row {
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 118px;
+}
+.trust-strip {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.mini-feature-row div,
+.trust-strip article,
+.feature-highlights article {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: 20px;
+  min-width: 0;
+  padding: 0 22px;
+  border-right: 1px solid rgba(255,255,255,.14);
+}
+.mini-feature-row div {
+  min-height: 74px;
+}
+.mini-feature-row div > [data-icon],
+.trust-strip article > [data-icon],
+.feature-highlights article > [data-icon] {
+  grid-row: 1 / span 2;
+  align-self: center;
+  margin-top: 0;
+}
+.mini-feature-row div:last-child,
+.trust-strip article:last-child,
+.feature-highlights article:last-child { border-right: 0; }
+.mini-feature-row b,
+.trust-strip b,
+.feature-highlights b {
+  display: block;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+.mini-feature-row span,
+.trust-strip span,
+.feature-highlights span {
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.45;
+  grid-column: 2;
+  margin-top: 6px;
+}
+
+.feature-highlights {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.insight-strip {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.insight-strip article {
+  grid-template-columns: 72px minmax(0, 1fr);
+  column-gap: 20px;
+  align-items: center;
+  min-height: 126px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.insight-strip article > [data-icon] {
+  align-self: center;
+  margin-top: 0;
+}
+
+.insight-strip b {
+  align-self: end;
+}
+
+.insight-strip span {
+  align-self: start;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 42px 24px;
+}
+.pillars article {
+  display: grid;
+  grid-template-rows: 58px minmax(52px, auto) 1fr;
+  align-content: start;
+  min-width: 0;
+  min-height: 216px;
+  padding: 8px 34px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,.14);
+}
+.pillars article > [data-icon] {
+  justify-self: center;
+  align-self: start;
+}
+.pillars h3 {
+  align-self: start;
+  margin: 0;
+}
+.pillars article:last-child { border-right: 0; }
+.pillars p {
+  align-self: start;
+  margin: 10px auto 0;
+  max-width: 230px;
+  font-size: 14px;
+}
+.pillars.mini {
+  padding: 24px 22px;
+  align-items: stretch;
+}
+.pillars.mini article {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 0 20px;
+  text-align: left;
+  align-items: center;
+  min-height: 126px;
+  padding: 0 34px;
+}
+.pillars.mini article > [data-icon] {
+  grid-row: 1 / span 2;
+  justify-self: start;
+  align-self: center;
+}
+.pillars.mini h3 {
+  align-self: end;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.15;
+}
+.pillars.mini p {
+  grid-column: 2;
+  align-self: start;
+  margin: 8px 0 0;
+  max-width: 220px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.value-section {
+  display: grid;
+  grid-template-columns: minmax(300px, .68fr) 1fr;
+  gap: 32px;
+  padding: 32px;
+  align-items: stretch;
+}
+.check-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 24px;
+  padding: 0;
+  color: #fff;
+}
+.check-list li {
+  position: relative;
+  padding-left: 26px;
+}
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 0 0 14px rgba(255, 0, 95, .42);
+}
+.check-list li::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+}
+.guarantee {
+  margin: 16px 0 0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.analytics-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.analytics-cards article,
+.chart-panels article {
+  min-width: 0;
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,.052), rgba(0,0,0,.72));
+  border: 1px solid rgba(255,255,255,.34);
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04), 0 0 22px rgba(255,0,106,.08);
+}
+.analytics-cards h3,
+.chart-panels h3 { font-family: Inter, Arial, sans-serif; font-size: 14px; }
+.donut {
+  width: 122px;
+  height: 122px;
+  margin: 22px auto;
+  border-radius: 50%;
+  background: conic-gradient(var(--pink) 0 72%, #272730 72% 100%);
+  box-shadow: 0 0 22px rgba(255,0,106,.28);
+  position: relative;
+}
+.donut::after {
+  content: "";
+  position: absolute;
+  inset: 32px;
+  border-radius: 50%;
+  background: #09090e;
+}
+.donut.alt { background: conic-gradient(var(--pink) 0 72%, #fff 72% 98%, #5b5b66 98% 100%); }
+dl { margin: 0; display: grid; gap: 10px; }
+dl div { display: flex; justify-content: space-between; gap: 14px; font-size: 13px; }
+dd { margin: 0; color: #fff; }
+.bars { display: grid; gap: 15px; margin-top: 22px; }
+.bar-row {
+  display: grid;
+  grid-template-columns: 1fr 4fr auto;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 13px;
+}
+.bar-row i {
+  height: 7px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--pink), var(--pink-3));
+  box-shadow: 0 0 14px rgba(255,0,106,.55);
+}
+.collabs { display: grid; gap: 12px; margin-top: 18px; }
+.opportunity-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.opportunity-card li {
+  position: relative;
+  padding-left: 22px;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.35;
+}
+.opportunity-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .45em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 0 0 14px rgba(255,0,106,.7);
+}
+.collab-row {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+.collab-row i {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  background: var(--portrait);
+  background-size: cover;
+}
+.collab-row b { display: block; font-size: 13px; }
+.collab-row span { color: var(--muted); font-size: 12px; }
+
+.demo-hero,
+.analytics-hero {
+  display: grid;
+  grid-template-columns: minmax(300px, .55fr) 1fr;
+  gap: 34px;
+  align-items: center;
+}
+.feed-preview {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  gap: 28px;
+  align-items: center;
+}
+.wide-device {
+  min-height: 250px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 16px rgba(0,0,0,.7);
+}
+.phone-device {
+  min-height: 230px;
+  border: 8px solid #07070a;
+  outline: 1px solid rgba(255,255,255,.35);
+  border-radius: 24px;
+}
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 28px;
+}
+.filter-bar span {
+  margin-right: auto;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.featured,
+.post-grid-section {
+  padding: 22px 28px 28px;
+}
+.featured h2,
+.post-grid-section h2 {
+  font-family: Inter, Arial, sans-serif;
+  font-size: 14px;
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-top: 16px;
+}
+.post-card {
+  position: relative;
+  display: flex;
+  min-height: 132px;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 18px rgba(255,0,106,.1);
+}
+.post-card::before {
+  z-index: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.76), rgba(0,0,0,.05));
+}
+.post-card > * { position: relative; z-index: 1; }
+.post-card small {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: 900;
+}
+.post-card b { font-size: 13px; }
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+.post-grid .post-card { min-height: 120px; }
+.section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+.section-title-row span,
+.section-title-row a {
+  color: var(--pink);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.load-more {
+  display: flex;
+  width: min(360px, 100%);
+  margin: 24px auto 0;
+}
+
+.bottom-cta {
+  display: grid;
+  grid-template-columns: minmax(260px, .82fr) minmax(300px, 1fr) minmax(220px, .48fr) minmax(220px, .48fr);
+  gap: 28px;
+  align-items: center;
+  padding: 28px 36px;
+  background:
+    linear-gradient(90deg, rgba(255,0,106,.12), rgba(255,255,255,.035) 45%, rgba(255,0,106,.08)),
+    linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+}
+.bottom-cta h2 { font-size: clamp(30px, 4vw, 46px); }
+.bottom-cta p { margin: 0; color: #fff; }
+.bottom-cta .btn {
+  width: 100%;
+  min-width: 0;
+  justify-content: center;
+}
+
+.dashboard-preview {
+  display: grid;
+  grid-template-columns: 1.5fr .8fr;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,.32);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.82));
+  box-shadow: 0 0 28px rgba(255,0,106,.13);
+}
+.dashboard-top {
+  grid-column: 1 / -1;
+  min-height: 82px;
+  background: linear-gradient(90deg, rgba(240,6,93,.18), rgba(255,255,255,.04));
+  border-radius: 5px;
+}
+.line-chart {
+  min-height: 170px;
+  background:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px) 0 0/100% 34px,
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px) 0 0/54px 100%,
+    linear-gradient(145deg, transparent 0 14%, var(--pink) 15% 17%, transparent 18% 31%, var(--pink) 32% 34%, transparent 35% 52%, var(--pink) 53% 55%, transparent 56% 78%, var(--pink) 79% 81%, transparent 82%);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 4px;
+}
+.dashboard-donut {
+  min-height: 170px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 4px;
+  background: radial-gradient(circle, #09090e 0 31%, transparent 32%), conic-gradient(var(--pink) 0 72%, #272730 72% 100%);
+}
+.metric-bar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 18px 24px;
+}
+.metric-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 14px;
+  align-items: center;
+  padding: 0 22px;
+  border-right: 1px solid rgba(255,255,255,.15);
+}
+.metric-card:last-child { border-right: 0; }
+.metric-card strong { font-size: 27px; }
+.metric-card span { color: #fff; font-size: 12px; text-transform: uppercase; }
+.metric-card small { grid-column: 2; color: #9dff79; font-size: 12px; text-shadow: 0 0 12px rgba(134,255,69,.45); }
+.chart-panels {
+  display: grid;
+  grid-template-columns: 1.25fr repeat(4, 1fr);
+  gap: 12px;
+  padding: 18px;
+}
+.chart-panels .line-chart.large { min-height: 190px; margin-top: 18px; }
+.platform-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 150px;
+  place-items: center;
+  margin-top: 22px;
+}
+.platform-split b {
+  display: grid;
+  gap: 14px;
+  place-items: center;
+  font-size: 34px;
+}
+.platform-split span {
+  font-size: 28px;
+  color: #fff;
+}
+
+.pricing-hero {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1fr) minmax(0, .78fr);
+  gap: 24px;
+}
+.benefit-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 46px;
+}
+.benefit-icons article {
+  display: grid;
+  grid-template-rows: 64px auto 1fr;
+  align-content: start;
+  justify-items: start;
+  gap: 12px;
+  min-height: 176px;
+  padding: 0 28px 0 0;
+  border-right: 1px solid rgba(255,255,255,.15);
+}
+.benefit-icons article:last-child { border-right: 0; }
+.benefit-icons [data-icon] {
+  align-self: start;
+}
+.benefit-icons b,
+.year-card b {
+  display: block;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.benefit-icons span {
+  display: block;
+  margin-top: 0;
+  color: #fff;
+  line-height: 1.42;
+}
+.value-stack,
+.year-card {
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,.052), rgba(0,0,0,.76));
+  border: 1px solid rgba(255,255,255,.34);
+  border-radius: 5px;
+  box-shadow: 0 0 26px rgba(255,0,106,.1);
+}
+.value-stack h2 {
+  text-align: center;
+  max-width: 420px;
+  margin: 0 auto 30px;
+  font-size: clamp(24px, 1.8vw, 30px);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+.value-stack ul {
+  margin: 0 0 14px;
+  padding: 0;
+  list-style: none;
+}
+.value-stack li {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 82px;
+  gap: 18px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,.11);
+}
+.value-stack li span:first-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 0 8px;
+  color: var(--pink);
+  border: 1px solid rgba(255, 0, 95, .38);
+  border-radius: 4px;
+  background: rgba(255, 0, 95, .06);
+  font-size: 12px;
+  font-weight: 900;
+}
+.value-stack li b { color: var(--pink); }
+.value-stack strong {
+  display: block;
+  margin-top: 16px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.value-stack strong span { color: var(--pink); }
+.strike-value {
+  position: relative;
+  display: inline-block;
+  color: var(--pink);
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  text-decoration-color: rgba(255, 255, 255, .78);
+  text-shadow: 0 0 18px rgba(255,0,106,.42);
+}
+.year-card {
+  text-align: center;
+}
+.year-card .check-list {
+  max-width: 310px;
+  margin: 22px auto 0;
+  text-align: left;
+}
+.year-card .check-list li {
+  padding-left: 34px;
+  line-height: 1.35;
+}
+.year-card .check-list li::before {
+  top: 2px;
+}
+.year-card .check-list li::after {
+  top: 5px;
+}
+.year-card [data-icon] {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 12px;
+}
+.year-card .icon-svg {
+  width: 46px;
+  height: 46px;
+  stroke-width: 1.8;
+}
+.year-card [data-icon]::before {
+  width: 44px;
+  height: 44px;
+  border-width: 3px;
+}
+.year-card [data-icon]::after {
+  width: 12px;
+  height: 12px;
+}
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  padding: 12px;
+}
+.plan-card {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--plan-color) 22%, transparent), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,.052), rgba(0,0,0,.78));
+  border: 1px solid color-mix(in srgb, var(--plan-color) 42%, rgba(255,255,255,.24));
+  border-radius: 5px;
+  box-shadow: 0 0 25px color-mix(in srgb, var(--plan-color) 24%, transparent);
+}
+.plan-card.popular { border-color: var(--pink); box-shadow: 0 0 32px rgba(255,0,106,.38), 0 0 80px rgba(255,0,106,.12); }
+.plan-card.popular::before {
+  content: "Most Popular";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  height: 30px;
+  background: var(--pink);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.plan-card.popular { padding-top: 46px; }
+.plan-card h2 { color: var(--plan-color); text-align: center; font-size: 32px; }
+.plan-card .value {
+  border: 1px solid color-mix(in srgb, var(--plan-color) 60%, transparent);
+  padding: 8px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.price {
+  color: var(--plan-color);
+  font-size: clamp(44px, 5vw, 58px);
+  font-weight: 900;
+}
+.price small { color: #fff; font-size: 20px; }
+.plan-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+.plan-card li {
+  position: relative;
+  padding-left: 25px;
+  font-size: 14px;
+}
+.plan-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 8px;
+  height: 14px;
+  border-right: 2px solid var(--plan-color);
+  border-bottom: 2px solid var(--plan-color);
+  transform: rotate(45deg);
+  color: var(--plan-color);
+  font-weight: 900;
+}
+.plan-card .btn { color: var(--plan-color); border-color: var(--plan-color); }
+.plan-card.popular .btn { color: #fff; background: var(--pink); }
+
+.checkout-hero {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: clamp(34px, 5vw, 66px);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,0,95,.26), transparent 36rem),
+    linear-gradient(180deg, rgba(255,255,255,.055), rgba(0,0,0,.72));
+}
+.checkout-hero h1 {
+  max-width: 900px;
+}
+.checkout-hero p:not(.eyebrow) {
+  max-width: 760px;
+  font-size: 18px;
+}
+.payment-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+.pay-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132px;
+  height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  color: #050507;
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  box-shadow: 0 0 22px rgba(255,255,255,.12), 0 0 36px rgba(255,0,106,.12);
+}
+.pay-logo.afterpay {
+  background: #a8ffe8;
+}
+.pay-logo.afterpay::after {
+  content: "<>";
+  margin-left: 4px;
+  font-size: 16px;
+  letter-spacing: -4px;
+}
+.pay-logo.affirm {
+  background: #fff;
+  color: #08080d;
+  font-size: 30px;
+}
+.pay-logo.affirm::after {
+  content: "";
+  width: 42px;
+  height: 24px;
+  margin-left: -16px;
+  margin-top: -10px;
+  border-top: 5px solid #514bff;
+  border-radius: 50%;
+}
+.pay-logo.klarna {
+  background: #ffb6c9;
+  border-radius: 10px;
+}
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, .9fr) minmax(420px, 1.05fr);
+  gap: clamp(24px, 4vw, 52px);
+  padding: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+.checkout-plan-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+.checkout-plan {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 16px;
+  width: 100%;
+  min-height: 92px;
+  padding: 18px 20px;
+  color: #fff;
+  text-align: left;
+  background:
+    radial-gradient(circle at 0% 0%, color-mix(in srgb, var(--plan-color) 26%, transparent), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.76));
+  border: 1px solid color-mix(in srgb, var(--plan-color) 44%, rgba(255,255,255,.24));
+  border-radius: 6px;
+}
+.checkout-plan.is-selected {
+  border-color: var(--pink);
+  box-shadow: 0 0 28px rgba(255,0,106,.34);
+}
+.checkout-plan span,
+.checkout-plan b {
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.checkout-plan b {
+  color: var(--plan-color);
+}
+.checkout-plan small {
+  color: #fff;
+  font-size: 12px;
+}
+.checkout-plan em {
+  grid-column: 1 / -1;
+  color: #fff;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 13px;
+  text-transform: none;
+  text-shadow: none;
+}
+.checkout-note,
+.checkout-disclaimer {
+  color: #cfc8d4;
+  font-size: 13px;
+}
+.checkout-card {
+  display: grid;
+  gap: 14px;
+  padding: clamp(22px, 3vw, 34px);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(255,0,95,.18), transparent 18rem),
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.84));
+  border: 1px solid rgba(255,255,255,.34);
+  border-radius: 8px;
+  box-shadow: 0 0 38px rgba(255,0,106,.16);
+}
+.checkout-card h2 {
+  font-size: 34px;
+}
+.checkout-card label {
+  display: grid;
+  gap: 6px;
+}
+.checkout-card label span {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+.checkout-card input,
+.checkout-card select,
+.checkout-card textarea {
+  width: 100%;
+  min-height: 54px;
+  padding: 12px 14px;
+  color: #fff;
+  background: #030305;
+  border: 1px solid rgba(255,255,255,.38);
+  border-radius: 4px;
+}
+.checkout-card input:focus,
+.checkout-card select:focus,
+.checkout-card textarea:focus {
+  outline: 2px solid rgba(255,0,95,.38);
+  border-color: var(--pink);
+}
+.checkout-card textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+.checkout-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.order-summary {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 6px;
+}
+.order-summary div {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  color: #fff;
+}
+.order-summary span {
+  color: var(--muted);
+}
+.order-summary strong {
+  color: var(--pink);
+  text-shadow: 0 0 18px rgba(255,0,106,.42);
+}
+.checkout-pay {
+  width: 100%;
+}
+.preferred-pay {
+  display: grid;
+  gap: 5px;
+  padding: 16px 18px;
+  background: linear-gradient(90deg, rgba(255,0,95,.16), rgba(255,255,255,.045));
+  border: 1px solid rgba(255,0,95,.46);
+  border-radius: 6px;
+  box-shadow: 0 0 22px rgba(255,0,106,.13);
+}
+.preferred-pay b {
+  color: var(--pink);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.preferred-pay span {
+  color: #fff;
+}
+.preferred-pay strong {
+  color: var(--pink);
+  text-shadow: 0 0 14px rgba(255,0,106,.5);
+}
+.split-payments {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,.14);
+}
+.split-payments > span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+.checkout-status {
+  margin: 0;
+  color: var(--pink-3);
+  font-weight: 900;
+}
+.hidden-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: .55fr 1fr;
+  gap: 28px;
+  padding: 26px 36px;
+  align-items: center;
+}
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.contact-form label {
+  display: grid;
+  gap: 5px;
+}
+.contact-form span {
+  color: #fff;
+  font-size: 12px;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  color: #fff;
+  background: #030305;
+  border: 1px solid rgba(255,255,255,.38);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.035);
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: 2px solid rgba(25,237,255,.45);
+  border-color: var(--cyan);
+}
+.contact-form textarea { min-height: 78px; resize: vertical; }
+.wide { grid-column: 1 / -1; }
+.form-status {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--cyan);
+  font-weight: 800;
+}
+.bottom-cta.final {
+  grid-template-columns: 118px minmax(340px, .98fr) minmax(320px, .85fr) minmax(260px, .62fr);
+  gap: 34px;
+}
+.bottom-cta.final .btn {
+  width: 100%;
+  min-width: 0;
+  padding-inline: 22px;
+}
+.crown {
+  display: grid;
+  place-items: center;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background: var(--pink);
+  color: #fff;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 0 24px rgba(255,0,106,.54);
+}
+
+.terms-hero {
+  padding: clamp(34px, 4.2vw, 62px);
+  min-height: 360px;
+  display: grid;
+  align-content: center;
+}
+.terms-hero p:not(.eyebrow) {
+  max-width: 880px;
+  font-size: 20px;
+}
+.terms-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  padding: 28px;
+}
+.terms-grid article {
+  padding: 8px 24px;
+  border-right: 1px solid rgba(255,255,255,.16);
+}
+.terms-grid article:last-child { border-right: 0; }
+.terms-grid h2,
+.terms-breakdown h2 {
+  font-size: clamp(28px, 3vw, 42px);
+}
+.terms-grid p,
+.terms-breakdown p {
+  color: #f2edf2;
+  font-size: 16px;
+}
+.terms-breakdown {
+  display: grid;
+  grid-template-columns: minmax(300px, .68fr) 1fr;
+  gap: 34px;
+  padding: 34px;
+  align-items: start;
+}
+.terms-table {
+  display: grid;
+  gap: 0;
+  padding: 16px 20px;
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius: 6px;
+  background: rgba(0,0,0,.34);
+}
+.terms-table div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(255,255,255,.13);
+}
+.terms-table span {
+  color: #fff;
+  font-weight: 800;
+}
+.terms-table strong {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 50;
+  max-width: min(520px, calc(100% - 32px));
+  padding: 14px 18px;
+  color: #fff;
+  background: rgba(15, 15, 20, .96);
+  border: 1px solid var(--pink);
+  border-radius: 6px;
+  box-shadow: 0 0 24px rgba(240,6,93,.3);
+  transform: translate(-50%, 140%);
+  transition: transform .25s ease;
+}
+.toast.is-visible { transform: translate(-50%, 0); }
+
+/* Premium finish */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    linear-gradient(rgba(255,255,255,.032) 1px, transparent 1px) 0 0 / 72px 72px,
+    linear-gradient(90deg, rgba(255,255,255,.026) 1px, transparent 1px) 0 0 / 72px 72px,
+    radial-gradient(circle at 50% 0%, rgba(255,0,106,.18), transparent 46rem);
+  mask-image: linear-gradient(180deg, black, rgba(0,0,0,.74) 50%, black);
+}
+
+.site-shell {
+  width: min(1580px, calc(100% - 48px));
+}
+
+.topbar {
+  min-height: 86px;
+  padding: 14px 28px;
+  grid-template-columns: 260px 1fr auto;
+}
+
+.brand {
+  font-size: 34px;
+}
+
+.main-nav {
+  font-size: 14px;
+  gap: clamp(26px, 3.25vw, 66px);
+}
+
+.order-button {
+  min-width: 230px;
+}
+
+.framed {
+  overflow: hidden;
+}
+
+.framed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(115deg, rgba(255,255,255,.12), transparent 16%, transparent 82%, rgba(255,255,255,.08)),
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.08), transparent 24rem);
+  opacity: .48;
+}
+
+.framed > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero,
+.pricing-hero {
+  min-height: 0;
+  padding: clamp(28px, 3vw, 44px);
+}
+
+.grid-hero,
+.demo-hero,
+.analytics-hero {
+  gap: clamp(34px, 4vw, 58px);
+}
+
+.grid-hero {
+  grid-template-columns: minmax(440px, .86fr) minmax(560px, 1.14fr);
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+h1 {
+  max-width: 660px;
+  font-size: clamp(44px, 4.2vw, 66px);
+  line-height: .9;
+  text-shadow: 0 0 22px rgba(255,255,255,.08);
+}
+
+.hero-copy h1 > em {
+  display: inline;
+  font-size: 1em;
+}
+.headline-nowrap {
+  white-space: nowrap;
+}
+.headline-nowrap em {
+  display: inline;
+  font-size: 1em;
+}
+
+h2 {
+  font-size: clamp(36px, 4.4vw, 60px);
+}
+
+p {
+  color: #eee8f1;
+}
+
+.hero-copy p:not(.eyebrow),
+.analytics-hero p,
+.demo-hero p,
+.pricing-copy p {
+  max-width: 590px;
+  font-size: 18px;
+}
+
+.btn {
+  min-height: 56px;
+  padding: 0 34px;
+  font-size: 14px;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 26px rgba(255,0,106,.72), 0 0 72px rgba(255,0,106,.28);
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,.08);
+  box-shadow: 0 0 20px rgba(255,255,255,.1);
+}
+
+.creator-laptop {
+  transform: none;
+  min-height: 0;
+  min-width: 0;
+  align-self: center;
+}
+
+.profile-panel {
+  min-height: 0;
+}
+
+.feature-photo {
+  min-height: 210px;
+}
+
+.feature-photo::after,
+.wide-device::after,
+.phone-device::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 70% 22%, rgba(255,255,255,.2), transparent 11rem);
+}
+
+.feature-photo,
+.wide-device,
+.phone-device,
+.post-card {
+  position: relative;
+  background-blend-mode: screen, normal, normal;
+}
+
+.thumb-row .post-card {
+  min-height: 112px;
+  padding: 30px 12px 14px;
+}
+
+.mini-feature-row,
+.trust-strip,
+.feature-highlights {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.035), rgba(255,0,95,.045), rgba(255,255,255,.025)),
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.016));
+}
+
+.pillars article,
+.metric-card,
+.mini-feature-row div,
+.trust-strip article,
+.feature-highlights article {
+  transition: transform .22s ease, background .22s ease;
+}
+
+.pillars article:hover,
+.metric-card:hover,
+.mini-feature-row div:hover,
+.trust-strip article:hover,
+.feature-highlights article:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,.035);
+}
+
+.pillars {
+  padding: 36px 26px;
+}
+
+.pillars article {
+  padding: 16px 30px;
+}
+
+.pillars h3,
+.trust-strip b,
+.feature-highlights b,
+.mini-feature-row b {
+  text-shadow: 0 0 14px rgba(255,255,255,.1);
+}
+
+.value-section,
+.contact-section {
+  padding: clamp(34px, 4vw, 58px);
+}
+
+.analytics-cards article,
+.chart-panels article,
+.value-stack,
+.year-card,
+.plan-card {
+  backdrop-filter: blur(14px);
+}
+
+.analytics-cards article:hover,
+.chart-panels article:hover,
+.plan-card:hover,
+.post-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,.42);
+}
+
+.analytics-cards article,
+.chart-panels article,
+.plan-card,
+.post-card {
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+
+.featured,
+.post-grid-section {
+  padding: 30px 34px 34px;
+}
+
+.featured-grid {
+  gap: 26px;
+}
+
+.post-grid {
+  gap: 18px;
+}
+
+.post-card {
+  min-height: 158px;
+}
+
+.post-grid .post-card {
+  min-height: 138px;
+}
+
+.metric-bar {
+  padding: 24px 30px;
+}
+
+.metric-card strong,
+.price,
+.mini-stats b {
+  text-shadow: 0 0 20px rgba(255,0,106,.28);
+}
+
+.chart-panels {
+  padding: 22px;
+  gap: 16px;
+}
+
+.pricing-hero {
+  gap: 24px;
+  align-items: stretch;
+}
+.pricing-hero > * {
+  min-width: 0;
+}
+.value-stack h2 {
+  margin-bottom: 22px;
+  line-height: 1.05;
+}
+.value-stack ul {
+  margin-top: 0;
+}
+.pricing-copy h1 {
+  max-width: 620px;
+  font-size: clamp(42px, 4.05vw, 62px);
+  line-height: .94;
+}
+.pricing-copy .benefit-icons {
+  margin-top: 26px;
+}
+#pricing .pricing-copy .benefit-icons {
+  grid-template-columns: repeat(2, minmax(0, 210px));
+  gap: 18px;
+  justify-content: start;
+}
+#pricing .pricing-copy .benefit-icons article {
+  grid-template-columns: 56px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  min-height: 112px;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 6px;
+  background: rgba(255,255,255,.025);
+  align-items: center;
+  column-gap: 14px;
+}
+#pricing .pricing-copy .benefit-icons article > [data-icon] {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 48px;
+  height: 48px;
+  justify-self: center;
+  align-self: center;
+}
+#pricing .pricing-copy .benefit-icons article > [data-icon] .icon-svg {
+  width: 25px;
+  height: 25px;
+}
+#pricing .pricing-copy .benefit-icons b {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: left;
+  line-height: 1.08;
+}
+#pricing .pricing-copy .benefit-icons span {
+  grid-column: 2;
+  grid-row: 2;
+  max-width: none;
+  margin: 6px 0 0;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.28;
+}
+
+@media (min-width: 1181px) {
+  .pricing-hero {
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1fr);
+    column-gap: clamp(34px, 2.6vw, 48px);
+    row-gap: 26px;
+  }
+
+  .pricing-copy {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .pricing-hero .year-card {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 120px minmax(360px, .9fr) minmax(420px, 1fr);
+    grid-template-rows: auto auto;
+    gap: 12px 32px;
+    align-items: center;
+    text-align: left;
+    min-height: 210px;
+  }
+
+  .pricing-hero .year-card [data-icon] {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin: 0;
+  }
+
+  .pricing-hero .year-card h2 {
+    grid-column: 2;
+    grid-row: 1;
+    max-width: 300px;
+  }
+
+  .pricing-hero .year-card p {
+    grid-column: 2;
+    grid-row: 2;
+    max-width: 520px;
+    margin: 0;
+    line-height: 1.42;
+  }
+
+  .pricing-hero .year-card .check-list {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    margin: 0;
+    max-width: none;
+  }
+}
+
+.pricing-cards {
+  padding: 18px;
+  gap: 20px;
+}
+
+.plan-card {
+  padding: 34px;
+}
+
+.plan-card.popular {
+  transform: scale(1.015);
+}
+
+.plan-card.popular:hover {
+  transform: translateY(-4px) scale(1.015);
+}
+
+.feature-highlights,
+.trust-strip {
+  min-height: 142px;
+  align-items: center;
+}
+
+.contact-section {
+  grid-template-columns: .48fr 1fr;
+}
+
+.contact-form {
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  min-height: 52px;
+}
+
+.bottom-cta {
+  min-height: 138px;
+  padding: 34px 44px;
+}
+
+.bottom-cta .btn {
+  min-width: 210px;
+}
+
+.terms-hero,
+.terms-grid,
+.terms-breakdown {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.018)),
+    radial-gradient(circle at 0% 0%, rgba(255,0,95,.07), transparent 26rem);
+}
+
+@media (max-width: 1180px) {
+  .grid-hero,
+  .demo-hero,
+  .analytics-hero,
+  .pricing-hero,
+  .terms-grid,
+  .terms-breakdown,
+  .checkout-layout,
+  .value-section,
+  .contact-section { grid-template-columns: 1fr; }
+  .post-grid { grid-template-columns: repeat(4, 1fr); }
+  .chart-panels { grid-template-columns: repeat(2, 1fr); }
+  .pricing-cards { grid-template-columns: 1fr; }
+  .bottom-cta,
+  .bottom-cta.final { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 860px) {
+  .site-shell { width: min(100% - 20px, 760px); margin-top: 10px; }
+  .page {
+    display: block !important;
+    scroll-margin-top: 10px;
+  }
+  .page + .page {
+    margin-top: 42px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,.12);
+  }
+  .topbar {
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+  }
+  .order-button { grid-column: 1 / -1; width: 100%; }
+  .menu-toggle { display: block; }
+  .main-nav {
+    display: none;
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-top: 8px;
+  }
+  .main-nav.is-open { display: flex; }
+  .main-nav a { border-top: 1px solid var(--line); }
+  .profile-panel,
+  .feed-preview,
+  .analytics-cards,
+  .featured-grid,
+  .mini-feature-row,
+  .trust-strip,
+  .feature-highlights,
+  .pillars,
+  .metric-bar,
+  .benefit-icons,
+  .checkout-two,
+  .contact-form { grid-template-columns: 1fr; }
+  .benefit-icons article {
+    grid-template-rows: auto auto auto;
+    gap: 12px;
+    min-height: 0;
+    padding: 18px 0;
+  }
+  .mini-feature-row div,
+  .trust-strip article,
+  .feature-highlights article,
+  .pillars article,
+  .metric-card {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.14);
+    padding: 16px 0;
+  }
+  .post-grid { grid-template-columns: repeat(2, 1fr); }
+  .filter-bar { flex-wrap: wrap; }
+  .filter-bar span { width: 100%; }
+  .hero, .pricing-hero, .checkout-hero, .checkout-layout { padding: 24px 18px; }
+  .creator-laptop { margin-top: 8px; }
+  .checkout-plan {
+    grid-template-columns: 1fr;
+  }
+  .value-stack li,
+  .terms-table div {
+    grid-template-columns: 1fr auto;
+    gap: 8px 14px;
+  }
+  .value-stack li span:first-child {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+  .terms-table strong {
+    display: grid;
+    gap: 8px;
+  }
+  .bottom-cta {
+    gap: 20px;
+    align-items: stretch;
+  }
+  .payment-logos {
+    gap: 10px;
+  }
+  .pay-logo {
+    min-width: 96px;
+    height: 38px;
+    font-size: 16px;
+  }
+  .pay-logo.affirm {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 560px) {
+  h1 { font-size: 44px; }
+  h2 { font-size: 38px; }
+  .btn { width: 100%; padding: 0 18px; }
+  .preview-form { grid-template-columns: 1fr; }
+  .post-grid { grid-template-columns: 1fr; }
+  .chart-panels { grid-template-columns: 1fr; }
+  .thumb-row { grid-template-columns: repeat(3, minmax(86px, 1fr)); gap: 10px; }
+  .value-stack li,
+  .terms-table div {
+    grid-template-columns: 1fr;
+  }
+  .value-stack li b,
+  .terms-table b {
+    justify-self: start;
+  }
+  .terms-grid h2,
+  .terms-breakdown h2 {
+    font-size: 34px;
+  }
+}
+
+/* Final alignment pass: one consistent icon/text system across all rows. */
+.mockup-cta {
+  justify-self: start;
+  width: min(270px, 100%);
+  margin-top: 12px;
+}
+
+@media (min-width: 861px) {
+  .mini-feature-row,
+  .trust-strip,
+  .feature-highlights,
+  .insight-strip {
+    align-items: stretch;
+  }
+
+  .mini-feature-row div,
+  .trust-strip article,
+  .feature-highlights article,
+  .insight-strip article {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    grid-template-rows: 1fr auto auto 1fr;
+    column-gap: 20px;
+    min-height: 124px;
+    padding: 20px 26px;
+    align-items: center;
+  }
+
+  .mini-feature-row div > [data-icon],
+  .trust-strip article > [data-icon],
+  .feature-highlights article > [data-icon],
+  .insight-strip article > [data-icon] {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+  }
+
+  .mini-feature-row b,
+  .trust-strip b,
+  .feature-highlights b,
+  .insight-strip b {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    margin: 0;
+    max-width: 210px;
+  }
+
+  .mini-feature-row span,
+  .trust-strip span,
+  .feature-highlights span,
+  .insight-strip span {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: start;
+    margin: 8px 0 0;
+    max-width: 230px;
+  }
+
+  .mini-feature-row div {
+    grid-template-columns: 82px minmax(0, 1fr);
+  }
+
+  .feature-highlights article {
+    grid-template-columns: 78px minmax(0, 1fr);
+  }
+
+  .pillars article {
+    grid-template-rows: 78px 62px minmax(112px, 1fr);
+    padding: 30px 28px;
+    justify-items: center;
+    align-content: start;
+  }
+
+  .pillars article > [data-icon] {
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+  }
+
+  .pillars h3 {
+    align-self: center;
+    min-height: 50px;
+    display: grid;
+    place-items: center;
+  }
+
+  .pillars p {
+    align-self: start;
+    margin-top: 16px;
+  }
+
+  .pillars.mini article {
+    grid-template-columns: 88px minmax(0, 1fr);
+    grid-template-rows: 1fr auto auto 1fr;
+    min-height: 162px;
+    padding: 22px 26px;
+    justify-items: start;
+  }
+
+  .pillars.mini article > [data-icon] {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+  }
+
+  .pillars.mini h3 {
+    grid-column: 2;
+    grid-row: 2;
+    min-height: 0;
+    display: block;
+    align-self: end;
+    text-align: left;
+  }
+
+  .pillars.mini p {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: start;
+    margin: 10px 0 0;
+    text-align: left;
+    max-width: 210px;
+  }
+
+  .metric-card {
+    grid-template-columns: 74px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 16px;
+    align-items: center;
+    min-height: 106px;
+  }
+
+  .metric-card > [data-icon] {
+    grid-row: 1 / span 2;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+  }
+
+  .metric-card small {
+    grid-column: 2;
+  }
+
+  .benefit-icons article {
+    grid-template-columns: 82px minmax(0, 1fr);
+    grid-template-rows: 1fr auto auto 1fr;
+    column-gap: 20px;
+    min-height: 176px;
+    padding: 22px 20px 22px 0;
+    align-items: center;
+    justify-items: start;
+  }
+
+  .benefit-icons [data-icon] {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+  }
+
+  .benefit-icons b {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    margin: 0;
+  }
+
+  .benefit-icons span {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: start;
+    margin: 10px 0 0;
+    max-width: 170px;
+  }
+}
+
+@media (max-width: 860px) {
+  .mini-feature-row div,
+  .trust-strip article,
+  .feature-highlights article,
+  .insight-strip article,
+  .pillars.mini article,
+  .benefit-icons article,
+  .metric-card {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 16px;
+    align-items: center;
+  }
+
+  .mini-feature-row div > [data-icon],
+  .trust-strip article > [data-icon],
+  .feature-highlights article > [data-icon],
+  .insight-strip article > [data-icon],
+  .pillars.mini article > [data-icon],
+  .benefit-icons article > [data-icon],
+  .metric-card > [data-icon] {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+  }
+
+  .pillars article {
+    grid-template-rows: auto auto auto;
+    gap: 14px;
+  }
+}
+
+/* Publishing cleanup: keep compact feature cards neat and predictable. */
+@media (min-width: 861px) {
+  #demo .pillars.mini article {
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px auto auto;
+    justify-items: center;
+    align-content: center;
+    gap: 12px;
+    min-height: 210px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  #demo .pillars.mini article > [data-icon] {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+  }
+
+  #demo .pillars.mini h3 {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+    line-height: 1.12;
+  }
+
+  #demo .pillars.mini p {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 0 auto;
+    max-width: 170px;
+    text-align: center;
+    line-height: 1.42;
+  }
+
+  #analytics .metric-card {
+    grid-template-columns: 74px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    gap: 4px 18px;
+    min-height: 122px;
+  }
+
+  #analytics .metric-card > [data-icon] {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    align-self: center;
+    justify-self: center;
+  }
+
+  #analytics .metric-card strong {
+    display: block;
+    font-size: clamp(24px, 2.15vw, 34px);
+    line-height: .95;
+    white-space: nowrap;
+  }
+
+  #analytics .metric-card .metric-main {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    display: grid;
+    gap: 7px;
+    min-width: 0;
+  }
+
+  #analytics .metric-card span {
+    display: block;
+    line-height: 1.15;
+    white-space: normal;
+  }
+
+  #analytics .metric-card small {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    display: block;
+    max-width: 150px;
+    margin-top: 8px;
+    line-height: 1.15;
+  }
+
+  #pricing .benefit-icons {
+    gap: 28px;
+  }
+
+  #pricing .benefit-icons article {
+    grid-template-columns: 1fr;
+    grid-template-rows: 66px auto auto;
+    min-height: 230px;
+    padding: 0 24px;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+  }
+
+  #pricing .benefit-icons article > [data-icon] {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+  }
+
+  #pricing .benefit-icons b {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+    line-height: 1.08;
+  }
+
+  #pricing .benefit-icons span {
+    grid-column: 1;
+    grid-row: 3;
+    max-width: 180px;
+    margin: 12px auto 0;
+    text-align: center;
+    line-height: 1.35;
+  }
+
+  #pricing .year-card p {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    text-wrap: balance;
+  }
+}
+
+
+</style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand is-active" href="#home" data-page-link="home" aria-label="Profile Posts+ home">
+        <span>Profile</span>
+        <strong>Posts+</strong>
+      </a>
+      <button class="menu-toggle icon-button" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home" data-page-link="home" class="is-active">Home</a>
+        <a href="#demo" data-page-link="demo">Demo</a>
+        <a href="#pillars" data-scroll-target="pillars">How It Works</a>
+        <a href="#analytics" data-page-link="analytics">Analytics</a>
+        <a href="#pricing" data-page-link="pricing">Pricing</a>
+        <a href="#terms" data-page-link="terms">Terms</a>
+      </nav>
+      <button class="btn btn-primary order-button" type="button" data-page-link="checkout">Order Now <span aria-hidden="true">-&gt;</span></button>
+    </header>
+
+    <main>
+      <section class="page is-active" id="home" data-page="home" aria-labelledby="home-title">
+        <div class="hero grid-hero framed purple-frame">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span>The Ultimate Creator Media Kit</p>
+            <h1 id="home-title">Turn your social content into <em>brand opportunities.</em></h1>
+            <p>Profile Posts+ transforms creator content into a searchable media kit built for brands, search engines, and AI discovery. Enter your handle to create a limited free preview.</p>
+            <form class="preview-form" data-preview-form="">
+              <div class="preview-platforms" role="group" aria-label="Choose platform">
+                <button class="platform-choice is-selected" type="button" data-preview-platform="instagram">Instagram</button>
+                <button class="platform-choice" type="button" data-preview-platform="tiktok">TikTok</button>
+              </div>
+              <input type="hidden" name="platform" value="instagram" data-preview-platform-input="">
+              <label><span>Instagram or TikTok handle</span><input name="previewHandle" placeholder="@yourhandle" autocomplete="off" required=""></label>
+              <button class="btn btn-primary" type="submit">Create Free Preview <span aria-hidden="true">-&gt;</span></button>
+              <div class="preview-status" data-preview-status="" role="status" aria-live="polite">
+                <div><b>Building preview</b><small>Checking the handle and preparing three preview posts.</small></div>
+              </div>
+            </form>
+          </div>
+          <article class="creator-laptop">
+            <div class="profile-panel">
+              <div class="profile-card">
+                <div class="avatar"></div>
+                <h3 data-preview-name="">Your Preview <span></span></h3>
+                <p><span data-preview-handle="">@yourhandle</span><br>Limited Free Preview</p>
+                <div class="mini-stats">
+                  <b>1<small>Profile Pic</small></b>
+                  <b>3<small>Sample Posts</small></b>
+                  <b>Free<small>Preview</small></b>
+                </div>
+                <div class="profile-note">Handle Preview Ready</div>
+                <p class="sample-disclaimer">Preview generated from your handle. Your live site uses your real content after setup.</p>
+              </div>
+              <div class="media-preview">
+                <div class="creator-nav">
+                  <b data-preview-nav="">Your Preview <span></span></b>
+                  <div>
+                    <button type="button" aria-label="Instagram" data-social="instagram">IG</button>
+                    <button type="button" aria-label="TikTok" data-social="tiktok">TT</button>
+                    <button type="button" aria-label="Email" data-open-contact="">MAIL</button>
+                  </div>
+                </div>
+                <div class="feature-photo">
+                  <div>
+                    <h2 data-preview-headline="">See how your handle becomes a brand-ready profile.</h2>
+                    <button class="btn btn-primary small mockup-cta" type="button" data-focus-preview="">Enter Your Handle</button>
+                  </div>
+                </div>
+                <div class="latest-strip" aria-label="Latest content">
+                  <span>3-Post Preview</span>
+                  <a href="#demo" data-page-link="demo">View All +</a>
+                  <div class="thumb-row"><article class="post-card" data-platform="tiktok" style="--portrait: radial-gradient(circle at 54% 22%, #ffd5bd 0 8%, transparent 9%), radial-gradient(circle at 60% 26%, rgba(255,255,255,.24), transparent 7%), linear-gradient(115deg, #15090b, #8a4b2d 28%, #171018 29% 55%, #d79058 56% 78%, #211014 79% 100%);">
+    <small aria-label="tiktok">TT</small>
+    <b>23.1K</b>
+    <b>2.1K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 48% 23%, #ffc7a3 0 8%, transparent 9%), radial-gradient(circle at 42% 28%, rgba(255,255,255,.18), transparent 8%), linear-gradient(95deg, #120b11, #b06943 32%, #1d1111 33% 58%, #f0a067 59% 80%, #111 81% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>18.7K</b>
+    <b>1.6K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 52% 22%, #e5a07d 0 8%, transparent 9%), radial-gradient(circle at 62% 30%, rgba(255,0,106,.28), transparent 10%), linear-gradient(120deg, #09070a, #562818 26%, #df935b 27% 54%, #151016 55% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>32.4K</b>
+    <b>1.8K</b>
+  </article><article class="post-card" data-platform="tiktok" style="--portrait: radial-gradient(circle at 50% 21%, #ffd2b4 0 8%, transparent 9%), radial-gradient(circle at 74% 20%, rgba(25,237,255,.18), transparent 10%), linear-gradient(105deg, #08080d, #c27545 35%, #211014 36% 64%, #86451f 65% 100%);">
+    <small aria-label="tiktok">TT</small>
+    <b>22.8K</b>
+    <b>3.2K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 54% 22%, #ffd5bd 0 8%, transparent 9%), radial-gradient(circle at 60% 26%, rgba(255,255,255,.24), transparent 7%), linear-gradient(115deg, #15090b, #8a4b2d 28%, #171018 29% 55%, #d79058 56% 78%, #211014 79% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>26.8K</b>
+    <b>2.4K</b>
+  </article></div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mini-feature-row framed blue-frame">
+          <div><i data-icon="refresh"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.7"></path><path d="M18 3v5h-5"></path><path d="M20 12a8 8 0 0 1-13.7 5.7"></path><path d="M6 21v-5h5"></path></svg></i><b>6-Hour Updates</b><span>Elfsight Refresh</span></div>
+          <div><i data-icon="screen"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="2"></rect><path d="M9 20h6"></path><path d="M12 16v4"></path></svg></i><b>Premium Website</b><span>Mobile Friendly</span></div>
+          <div><i data-icon="lock"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></i><b>Private Analytics</b><span>You Control</span></div>
+        </div>
+
+        <section class="pillars framed green-frame" id="pillars" aria-label="Five pillars">
+          <article><i data-icon="users"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="9.5" cy="7" r="4"></circle><path d="M22 20v-2a4 4 0 0 0-3-3.8"></path><path d="M16 3.3a4 4 0 0 1 0 7.4"></path></svg></i><h3>All-In-One<br>Media Kit</h3><p>Your content, your socials, your brand, all in one professional profile.</p></article>
+          <article><i data-icon="eye"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.8-7 10-7 10 7 10 7-3.8 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg></i><h3>Automatic<br>Content Sync</h3><p>Your latest Instagram and TikTok posts refresh every 6 hours.</p></article>
+          <article><i data-icon="chart"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 4-4 3 3 5-7"></path></svg></i><h3>Brand<br>Opportunities</h3><p>Stand out, get discovered, and turn your content into paid opportunities.</p></article>
+          <article><i data-icon="bars"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V10"></path><path d="M12 20V4"></path><path d="M19 20v-7"></path></svg></i><h3>Brand-Ready<br>Profile</h3><p>A professional profile that brands trust and work with instantly.</p></article>
+          <article><i data-icon="lock"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></i><h3>Private<br>Analytics</h3><p>See how your profile and content perform.</p></article>
+        </section>
+
+        <section class="value-section framed orange-frame">
+          <div>
+            <p class="eyebrow"><span></span>Built For Modern Creators</p>
+            <h2>Your content. Your power.</h2>
+            <ul class="check-list">
+              <li>Website updates automatically every 6 hours</li>
+              <li>Looks stunning on any device</li>
+              <li>Helps brands find you outside social apps</li>
+              <li>Saves you time and grows your income</li>
+            </ul>
+            <button class="btn btn-primary" type="button" data-plan="Free Preview">Start Free Preview <span aria-hidden="true">-&gt;</span></button>
+          </div>
+          <div class="analytics-cards compact">
+            <article><h3>Audience Overview</h3><div class="donut"></div><dl><div><dt>18-24</dt><dd>48%</dd></div><div><dt>25-34</dt><dd>32%</dd></div><div><dt>35-44</dt><dd>15%</dd></div><div><dt>45+</dt><dd>5%</dd></div></dl></article>
+            <article><h3>Preview Location</h3><div class="bars"><div class="bar-row"><span>USA</span><i style="width:100%"></i><b>Selected</b></div></div></article>
+            <article class="opportunity-card"><h3>Brand Opportunity Ready</h3><ul><li>Professional inquiry path</li><li>Search-ready creator profile</li><li>Built for first brand conversations</li></ul></article>
+          </div>
+        </section>
+
+        <section class="trust-strip framed cyan-frame" aria-label="Benefits">
+          <article><i data-icon="star"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.2l-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"></path></svg></i><b>5 Star Rated</b><span>Creators love Profile Posts+</span></article>
+          <article><i data-icon="refresh"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.7"></path><path d="M18 3v5h-5"></path><path d="M20 12a8 8 0 0 1-13.7 5.7"></path><path d="M6 21v-5h5"></path></svg></i><b>Auto Updates</b><span>Refreshes every 6 hours</span></article>
+          <article><i data-icon="lock"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></i><b>100% Secure</b><span>Your data is private and protected</span></article>
+          <article><i data-icon="award"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12.5-1.5 8 5-3 5 3-1.5-8"></path></svg></i><b>No Monthly Fees</b><span>Year one is included</span></article>
+        </section>
+      </section>
+
+      <section class="page" id="demo" data-page="demo" aria-labelledby="demo-title">
+        <section class="hero demo-hero framed purple-frame">
+          <div>
+            <p class="eyebrow"><span></span>Live Creator Feed</p>
+            <h1 id="demo-title">All my content. <em>One place.</em></h1>
+            <p>Your Instagram and TikTok content, automatically refreshed every 6 hours. Beautiful, professional, searchable, and built to attract brands.</p>
+          </div>
+          <div class="feed-preview">
+            <div class="wide-device"></div>
+            <div class="phone-device"></div>
+          </div>
+        </section>
+        <section class="filter-bar framed blue-frame" aria-label="Platform filter">
+          <span>View Content From</span>
+          <button class="btn btn-primary small is-selected" type="button" data-filter="instagram">IG Instagram</button>
+          <button class="btn btn-outline small" type="button" data-filter="tiktok">TT TikTok</button>
+          <button class="btn btn-outline small" type="button" data-filter="all">All Posts</button>
+        </section>
+        <section class="featured framed green-frame">
+          <h2>Featured Posts</h2>
+          <div class="featured-grid" data-featured-posts=""><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 48% 23%, #ffc7a3 0 8%, transparent 9%), radial-gradient(circle at 42% 28%, rgba(255,255,255,.18), transparent 8%), linear-gradient(95deg, #120b11, #b06943 32%, #1d1111 33% 58%, #f0a067 59% 80%, #111 81% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>18.7K</b>
+    <b>1.6K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 52% 22%, #e5a07d 0 8%, transparent 9%), radial-gradient(circle at 62% 30%, rgba(255,0,106,.28), transparent 10%), linear-gradient(120deg, #09070a, #562818 26%, #df935b 27% 54%, #151016 55% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>32.4K</b>
+    <b>1.8K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 50% 21%, #ffd2b4 0 8%, transparent 9%), radial-gradient(circle at 74% 20%, rgba(25,237,255,.18), transparent 10%), linear-gradient(105deg, #08080d, #c27545 35%, #211014 36% 64%, #86451f 65% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>26.8K</b>
+    <b>2.4K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 54% 22%, #ffd5bd 0 8%, transparent 9%), radial-gradient(circle at 60% 26%, rgba(255,255,255,.24), transparent 7%), linear-gradient(115deg, #15090b, #8a4b2d 28%, #171018 29% 55%, #d79058 56% 78%, #211014 79% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>21.6K</b>
+    <b>1.8K</b>
+  </article></div>
+        </section>
+        <section class="pillars mini framed orange-frame">
+          <article><i data-icon="bolt"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 10-13h-7l1-7Z"></path></svg></i><h3>Automatic Content Sync</h3><p>Updates every 6 hours without extra work.</p></article>
+          <article><i data-icon="eye"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.8-7 10-7 10 7 10 7-3.8 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg></i><h3>Discoverability</h3><p>Make it easy for brands to find you.</p></article>
+          <article><i data-icon="chart"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 4-4 3 3 5-7"></path></svg></i><h3>Analytics</h3><p>Understand your content that performs.</p></article>
+          <article><i data-icon="user"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg></i><h3>Creator Positioning</h3><p>Professional media kit built for you.</p></article>
+          <article><i data-icon="handshake"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 12 3 3a2 2 0 0 0 3 0l4-4"></path><path d="m2 12 4-4 4 4"></path><path d="m22 12-4-4-4 4"></path><path d="M6 8l5-3 4 3"></path></svg></i><h3>Collaboration Ready</h3><p>Designed to help you win brand deals.</p></article>
+        </section>
+        <section class="post-grid-section framed cyan-frame">
+          <div class="section-title-row"><h2>Latest Content</h2><span data-post-count="">4 Posts / 16 Reels</span></div>
+          <div class="post-grid" data-post-grid=""><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 48% 23%, #ffc7a3 0 8%, transparent 9%), radial-gradient(circle at 42% 28%, rgba(255,255,255,.18), transparent 8%), linear-gradient(95deg, #120b11, #b06943 32%, #1d1111 33% 58%, #f0a067 59% 80%, #111 81% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>18.7K</b>
+    <b>1.6K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 52% 22%, #e5a07d 0 8%, transparent 9%), radial-gradient(circle at 62% 30%, rgba(255,0,106,.28), transparent 10%), linear-gradient(120deg, #09070a, #562818 26%, #df935b 27% 54%, #151016 55% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>32.4K</b>
+    <b>1.8K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 50% 21%, #ffd2b4 0 8%, transparent 9%), radial-gradient(circle at 74% 20%, rgba(25,237,255,.18), transparent 10%), linear-gradient(105deg, #08080d, #c27545 35%, #211014 36% 64%, #86451f 65% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>26.8K</b>
+    <b>2.4K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 54% 22%, #ffd5bd 0 8%, transparent 9%), radial-gradient(circle at 60% 26%, rgba(255,255,255,.24), transparent 7%), linear-gradient(115deg, #15090b, #8a4b2d 28%, #171018 29% 55%, #d79058 56% 78%, #211014 79% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>21.6K</b>
+    <b>1.8K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 48% 23%, #ffc7a3 0 8%, transparent 9%), radial-gradient(circle at 42% 28%, rgba(255,255,255,.18), transparent 8%), linear-gradient(95deg, #120b11, #b06943 32%, #1d1111 33% 58%, #f0a067 59% 80%, #111 81% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>19.8K</b>
+    <b>1.5K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 52% 22%, #e5a07d 0 8%, transparent 9%), radial-gradient(circle at 62% 30%, rgba(255,0,106,.28), transparent 10%), linear-gradient(120deg, #09070a, #562818 26%, #df935b 27% 54%, #151016 55% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>22.2K</b>
+    <b>1.7K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 50% 21%, #ffd2b4 0 8%, transparent 9%), radial-gradient(circle at 74% 20%, rgba(25,237,255,.18), transparent 10%), linear-gradient(105deg, #08080d, #c27545 35%, #211014 36% 64%, #86451f 65% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>31.2K</b>
+    <b>2.8K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 54% 22%, #ffd5bd 0 8%, transparent 9%), radial-gradient(circle at 60% 26%, rgba(255,255,255,.24), transparent 7%), linear-gradient(115deg, #15090b, #8a4b2d 28%, #171018 29% 55%, #d79058 56% 78%, #211014 79% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>16.8K</b>
+    <b>1.2K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 48% 23%, #ffc7a3 0 8%, transparent 9%), radial-gradient(circle at 42% 28%, rgba(255,255,255,.18), transparent 8%), linear-gradient(95deg, #120b11, #b06943 32%, #1d1111 33% 58%, #f0a067 59% 80%, #111 81% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>20.3K</b>
+    <b>1.6K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 52% 22%, #e5a07d 0 8%, transparent 9%), radial-gradient(circle at 62% 30%, rgba(255,0,106,.28), transparent 10%), linear-gradient(120deg, #09070a, #562818 26%, #df935b 27% 54%, #151016 55% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>27.5K</b>
+    <b>2.5K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 50% 21%, #ffd2b4 0 8%, transparent 9%), radial-gradient(circle at 74% 20%, rgba(25,237,255,.18), transparent 10%), linear-gradient(105deg, #08080d, #c27545 35%, #211014 36% 64%, #86451f 65% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>29.1K</b>
+    <b>2.6K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 54% 22%, #ffd5bd 0 8%, transparent 9%), radial-gradient(circle at 60% 26%, rgba(255,255,255,.24), transparent 7%), linear-gradient(115deg, #15090b, #8a4b2d 28%, #171018 29% 55%, #d79058 56% 78%, #211014 79% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>18.1K</b>
+    <b>1.4K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 48% 23%, #ffc7a3 0 8%, transparent 9%), radial-gradient(circle at 42% 28%, rgba(255,255,255,.18), transparent 8%), linear-gradient(95deg, #120b11, #b06943 32%, #1d1111 33% 58%, #f0a067 59% 80%, #111 81% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>25.7K</b>
+    <b>2.2K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 52% 22%, #e5a07d 0 8%, transparent 9%), radial-gradient(circle at 62% 30%, rgba(255,0,106,.28), transparent 10%), linear-gradient(120deg, #09070a, #562818 26%, #df935b 27% 54%, #151016 55% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>28.2K</b>
+    <b>2.4K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 50% 21%, #ffd2b4 0 8%, transparent 9%), radial-gradient(circle at 74% 20%, rgba(25,237,255,.18), transparent 10%), linear-gradient(105deg, #08080d, #c27545 35%, #211014 36% 64%, #86451f 65% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>30.8K</b>
+    <b>2.9K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 54% 22%, #ffd5bd 0 8%, transparent 9%), radial-gradient(circle at 60% 26%, rgba(255,255,255,.24), transparent 7%), linear-gradient(115deg, #15090b, #8a4b2d 28%, #171018 29% 55%, #d79058 56% 78%, #211014 79% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>19.4K</b>
+    <b>1.7K</b>
+  </article></div>
+        </section>
+        <section class="bottom-cta framed pink-frame">
+          <h2>Turn your content into <em>brand opportunities.</em></h2>
+          <p>Your content deserves to be seen. Let us help you grow and partner with brands you love.</p>
+          <button class="btn btn-primary" type="button" data-page-link="checkout">Get Your Site <span aria-hidden="true">-&gt;</span></button>
+          <button class="btn btn-outline" type="button" data-open-contact="">Ask a Question <span aria-hidden="true">-&gt;</span></button>
+        </section>
+      </section>
+
+      <section class="page" id="analytics" data-page="analytics" aria-labelledby="analytics-title">
+        <section class="hero analytics-hero framed purple-frame">
+          <div>
+            <p class="eyebrow"><span></span>Analytics Overview</p>
+            <h1 id="analytics-title">Turn insights into <em>impact.</em></h1>
+          <p>Powerful analytics that show growth, content performance, and opportunity signals by niche, role, and broad location, all in one place.</p>
+            <button class="btn btn-primary" type="button" data-connect-accounts="">Connect Your Accounts <span aria-hidden="true">-&gt;</span></button>
+          </div>
+          <div class="dashboard-preview">
+            <div class="dashboard-top"></div>
+            <div class="line-chart"></div>
+            <div class="dashboard-donut"></div>
+          </div>
+        </section>
+        <section class="metric-bar framed blue-frame"><article class="metric-card"><i data-icon="users"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="9.5" cy="7" r="4"></circle><path d="M22 20v-2a4 4 0 0 0-3-3.8"></path><path d="M16 3.3a4 4 0 0 1 0 7.4"></path></svg></i><div class="metric-main"><strong>352K</strong><span>Total Followers</span></div><small>+12.5% vs last 30 days</small></article><article class="metric-card"><i data-icon="heart"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 5.6a5.2 5.2 0 0 0-7.4 0L12 7l-1.4-1.4a5.2 5.2 0 1 0-7.4 7.4L12 21l8.8-8a5.2 5.2 0 0 0 0-7.4Z"></path></svg></i><div class="metric-main"><strong>12.8M</strong><span>Total Likes</span></div><small>+8.3% vs last 30 days</small></article><article class="metric-card"><i data-icon="chart"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 4-4 3 3 5-7"></path></svg></i><div class="metric-main"><strong>8.7%</strong><span>Engagement Rate</span></div><small>+1.2% vs last 30 days</small></article><article class="metric-card"><i data-icon="eye"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.8-7 10-7 10 7 10 7-3.8 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg></i><div class="metric-main"><strong>1.2M</strong><span>Profile Views</span></div><small>+15.7% vs last 30 days</small></article><article class="metric-card"><i data-icon="arrow"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 5 7 7-7 7"></path></svg></i><div class="metric-main"><strong>245K</strong><span>Monthly Reach</span></div><small>+10.4% vs last 30 days</small></article></section>
+        <section class="chart-panels framed green-frame">
+          <article><h3>Followers Growth</h3><div class="line-chart large"></div></article>
+          <article><h3>Location</h3><div class="bars"><div class="bar-row"><span>USA</span><i style="width:100%"></i><b>Selected</b></div></div></article>
+          <article><h3>Age Range</h3><div class="donut"></div></article>
+          <article><h3>Gender</h3><div class="donut alt"></div></article>
+          <article><h3>Platform Breakdown</h3><div class="platform-split"><b>IG<span>68%</span></b><b>TT<span>32%</span></b></div></article>
+        </section>
+        <section class="featured top-content framed orange-frame">
+          <div class="section-title-row"><h2>Top Performing Content</h2><a href="#demo" data-page-link="demo">View All +</a></div>
+          <div class="featured-grid" data-top-posts=""><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 48% 23%, #ffc7a3 0 8%, transparent 9%), radial-gradient(circle at 42% 28%, rgba(255,255,255,.18), transparent 8%), linear-gradient(95deg, #120b11, #b06943 32%, #1d1111 33% 58%, #f0a067 59% 80%, #111 81% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>32.4K</b>
+    <b>1.8K</b>
+  </article><article class="post-card" data-platform="tiktok" style="--portrait: radial-gradient(circle at 52% 22%, #e5a07d 0 8%, transparent 9%), radial-gradient(circle at 62% 30%, rgba(255,0,106,.28), transparent 10%), linear-gradient(120deg, #09070a, #562818 26%, #df935b 27% 54%, #151016 55% 100%);">
+    <small aria-label="tiktok">TT</small>
+    <b>22.8K</b>
+    <b>3.2K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 50% 21%, #ffd2b4 0 8%, transparent 9%), radial-gradient(circle at 74% 20%, rgba(25,237,255,.18), transparent 10%), linear-gradient(105deg, #08080d, #c27545 35%, #211014 36% 64%, #86451f 65% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>26.8K</b>
+    <b>2.4K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 54% 22%, #ffd5bd 0 8%, transparent 9%), radial-gradient(circle at 60% 26%, rgba(255,255,255,.24), transparent 7%), linear-gradient(115deg, #15090b, #8a4b2d 28%, #171018 29% 55%, #d79058 56% 78%, #211014 79% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>21.6K</b>
+    <b>1.8K</b>
+  </article><article class="post-card" data-platform="tiktok" style="--portrait: radial-gradient(circle at 48% 23%, #ffc7a3 0 8%, transparent 9%), radial-gradient(circle at 42% 28%, rgba(255,255,255,.18), transparent 8%), linear-gradient(95deg, #120b11, #b06943 32%, #1d1111 33% 58%, #f0a067 59% 80%, #111 81% 100%);">
+    <small aria-label="tiktok">TT</small>
+    <b>17.3K</b>
+    <b>1.3K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 52% 22%, #e5a07d 0 8%, transparent 9%), radial-gradient(circle at 62% 30%, rgba(255,0,106,.28), transparent 10%), linear-gradient(120deg, #09070a, #562818 26%, #df935b 27% 54%, #151016 55% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>19.8K</b>
+    <b>1.5K</b>
+  </article><article class="post-card" data-platform="instagram" style="--portrait: radial-gradient(circle at 50% 21%, #ffd2b4 0 8%, transparent 9%), radial-gradient(circle at 74% 20%, rgba(25,237,255,.18), transparent 10%), linear-gradient(105deg, #08080d, #c27545 35%, #211014 36% 64%, #86451f 65% 100%);">
+    <small aria-label="instagram">IG</small>
+    <b>22.2K</b>
+    <b>1.7K</b>
+  </article><article class="post-card" data-platform="tiktok" style="--portrait: radial-gradient(circle at 54% 22%, #ffd5bd 0 8%, transparent 9%), radial-gradient(circle at 60% 26%, rgba(255,255,255,.24), transparent 7%), linear-gradient(115deg, #15090b, #8a4b2d 28%, #171018 29% 55%, #d79058 56% 78%, #211014 79% 100%);">
+    <small aria-label="tiktok">TT</small>
+    <b>24.6K</b>
+    <b>2.2K</b>
+  </article></div>
+        </section>
+        <section class="trust-strip insight-strip framed cyan-frame">
+          <article><i data-icon="trend"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16"></path><path d="m5 15 5-5 4 3 5-7"></path><path d="M15 6h4v4"></path></svg></i><b>Audience Is Growing</b><span>You gained 12.5% more followers in the last 30 days.</span></article>
+          <article><i data-icon="heart"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 5.6a5.2 5.2 0 0 0-7.4 0L12 7l-1.4-1.4a5.2 5.2 0 1 0-7.4 7.4L12 21l8.8-8a5.2 5.2 0 0 0 0-7.4Z"></path></svg></i><b>Engagement Is Strong</b><span>Your rate is above industry average.</span></article>
+          <article><i data-icon="globe"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a13 13 0 0 1 0 18"></path><path d="M12 3a13 13 0 0 0 0 18"></path></svg></i><b>Broad Location</b><span>Use a region instead of exact city or state for safer previews.</span></article>
+          <article><i data-icon="spark"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 14.6 9.4 22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6L12 2Z"></path></svg></i><b>Keep Collaborating</b><span>Consistent posting drives more brand opportunities.</span></article>
+        </section>
+        <section class="bottom-cta framed pink-frame">
+          <h2>Let data work for <em>you.</em></h2>
+          <p>Use your insights to create better content, grow your audience, and land more deals.</p>
+          <button class="btn btn-primary" type="button" data-page-link="checkout">Get Your Site <span aria-hidden="true">-&gt;</span></button>
+          <button class="btn btn-outline" type="button" data-open-contact="">Ask a Question <span aria-hidden="true">-&gt;</span></button>
+        </section>
+      </section>
+
+      <section class="page" id="pricing" data-page="pricing" aria-labelledby="pricing-title">
+        <section class="pricing-hero framed purple-frame">
+          <div class="pricing-copy">
+            <p class="eyebrow"><span></span>Pricing &amp; Contact</p>
+            <h1 id="pricing-title">One investment. One year of <em>brand opportunities.</em></h1>
+            <p>Start with a free limited preview: one profile image plus three sample posts. Choose your niche, role, and broad location, then upgrade to the $999 full media kit when you are ready.</p>
+          </div>
+          <div class="value-stack">
+            <h2>Every plan includes <em>real value</em></h2>
+            <ul><li><span>KIT</span><span>Creator Website System</span><b class="strike-value">$1,200</b></li><li><span>SOC</span><span>RevU Kit Feed Integrations</span><b class="strike-value">$600</b></li><li><span>MOB</span><span>Mobile Optimization</span><b class="strike-value">$450</b></li><li><span>DASH</span><span>Analytics Dashboard</span><b class="strike-value">$650</b></li><li><span>AI</span><span>AI / Search Discoverability</span><b class="strike-value">$500</b></li><li><span>SET</span><span>Setup + Onboarding</span><b class="strike-value">$450</b></li><li><span>HOST</span><span>Hosting + Maintenance</span><b class="strike-value">$690</b></li><li><span>FORM</span><span>Contact &amp; Inquiry System</span><b class="strike-value">$300</b></li><li><span>SYNC</span><span>Content Sync System</span><b class="strike-value">$400</b></li></ul>
+            <strong>Starter Total Value: <span class="strike-value">$5,240</span></strong>
+          </div>
+          <div class="year-card">
+            <i data-icon="calendar"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"></rect><path d="M8 3v4"></path><path d="M16 3v4"></path><path d="M4 10h16"></path><path d="M9 15h6"></path></svg></i>
+            <h2>One Year Included</h2>
+            <p>Includes 12 months of hosting, maintenance, analytics support, SEO care, and automatic content updates.</p>
+            <ul class="check-list">
+              <li>No monthly fees</li>
+              <li>No hidden costs</li>
+              <li>Updates every 6 hours</li>
+              <li>Domain transfers to you after cancellation</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="pricing-cards framed blue-frame" aria-label="Pricing plans"><article class="plan-card popular" style="--plan-color: #168dff;">
+      <h2>Starter</h2>
+      <p>Perfect for creators getting started.</p>
+      <div class="value">Total Value: <span class="strike-value">$5,240</span></div>
+      <div class="price">$999 <small>/year</small></div>
+      <b>One payment. One year.</b>
+      <ul><li>Everything in Value Stack</li><li>Up to 20 Profile Posts</li><li>6-hour automatic updates</li><li>SEO + AI discoverability</li><li>Analytics Dashboard</li><li>Hosting + support included</li></ul>
+      <button class="btn" type="button" data-plan="Starter">Choose Starter <span aria-hidden="true">-&gt;</span></button>
+    </article><article class="plan-card" style="--plan-color: #b640ff;">
+      <h2>Growth</h2>
+      <p>Built for creators ready to grow.</p>
+      <div class="value">Total Value: <span class="strike-value">$6,450</span></div>
+      <div class="price">$1,999 <small>/year</small></div>
+      <b>One payment. One year.</b>
+      <ul><li>Everything in Starter</li><li>Up to 40 Profile Posts</li><li>Advanced Analytics + Reports</li><li>Priority Email Support</li><li>Custom Link in Bio</li><li>Enhanced discoverability setup</li></ul>
+      <button class="btn" type="button" data-plan="Growth">Choose Growth <span aria-hidden="true">-&gt;</span></button>
+    </article><article class="plan-card" style="--plan-color: #ff006a;">
+      <h2>Brand</h2>
+      <p>For creators ready for pro brand outreach.</p>
+      <div class="value">Total Value: <span class="strike-value">$7,950</span></div>
+      <div class="price">$2,999 <small>/year</small></div>
+      <b>One payment. One year.</b>
+      <ul><li>Everything in Growth</li><li>Up to 80 Profile Posts</li><li>Dedicated Success Manager</li><li>Custom Branding Options</li><li>Premium integration support</li><li>Brand opportunity positioning</li></ul>
+      <button class="btn" type="button" data-plan="Brand">Choose Brand <span aria-hidden="true">-&gt;</span></button>
+    </article></section>
+
+        <section class="feature-highlights framed orange-frame">
+          <article><i data-icon="calendar"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"></rect><path d="M8 3v4"></path><path d="M16 3v4"></path><path d="M4 10h16"></path><path d="M9 15h6"></path></svg></i><b>1 Year Included</b><span>Hosting, updates, SEO care, analytics, and support.</span></article>
+          <article><i data-icon="phone"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"></path></svg></i><b>Mobile Optimized</b><span>Your site looks perfect on every device.</span></article>
+          <article><i data-icon="refresh"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.7"></path><path d="M18 3v5h-5"></path><path d="M20 12a8 8 0 0 1-13.7 5.7"></path><path d="M6 21v-5h5"></path></svg></i><b>6-Hour Updates</b><span>Your website refreshes automatically without extra work.</span></article>
+          <article><i data-icon="users"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="9.5" cy="7" r="4"></circle><path d="M22 20v-2a4 4 0 0 0-3-3.8"></path><path d="M16 3.3a4 4 0 0 1 0 7.4"></path></svg></i><b>Brand Discovery</b><span>Built so brands can find you beyond Instagram and TikTok.</span></article>
+        </section>
+
+        <section class="contact-section framed cyan-frame" id="contact">
+          <div>
+            <h2>Let's build your <em>creator presence.</em></h2>
+            <p>Fill out the form and we will get back to you within 24 hours.</p>
+            <ul class="check-list">
+              <li>No pressure. Just answers.</li>
+              <li>Personal response from our team.</li>
+              <li>A premium creator presence built to last.</li>
+            </ul>
+          </div>
+          <form class="contact-form" name="creator-inquiry" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-contact-form="">
+            <input type="hidden" name="form-name" value="creator-inquiry">
+            <p class="hidden-field" aria-hidden="true"><label>Do not fill this out <input name="bot-field" tabindex="-1"></label></p>
+            <label><span>Full Name *</span><input name="name" autocomplete="name" required=""></label>
+            <label><span>Email Address *</span><input name="email" type="email" autocomplete="email" required=""></label>
+            <label><span>Instagram Username</span><input name="instagram" placeholder="@yourhandle"></label>
+            <label><span>TikTok Username</span><input name="tiktok" placeholder="@yourhandle"></label>
+            <label><span>Niche *</span><select name="niche" required=""><option value="">Select a niche</option><option>Beauty</option><option>Finance</option><option>Health</option><option>Fitness</option><option>Technology</option><option>Education</option></select></label>
+            <label><span>Profile Role *</span><select name="profileRole" required=""><option value="">Select a role</option><option>Creator</option><option>Spectator</option><option>Critic</option></select></label>
+            <label class="wide"><span>Location *</span><select name="location" required=""><option value="">Select a broad location</option><option>USA</option><option>Europe</option><option>Asia</option><option>Africa</option><option>Other</option></select></label>
+            <label class="wide"><span>Package Interested In *</span><select name="package" required=""><option value="">Select a package</option><option>Free Preview</option><option>Starter</option><option>Growth</option><option>Brand</option></select></label>
+            <label class="wide"><span>Tell Us About Your Brand / Goals *</span><textarea name="message" required="" placeholder="What kind of content do you create? Who is your audience?"></textarea></label>
+            <button class="btn btn-cyan wide" type="submit">Send Message <span aria-hidden="true">-&gt;</span></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section class="bottom-cta final framed pink-frame">
+          <span class="crown">PP+</span>
+          <h2>Your content deserves better than just a link in bio.</h2>
+          <p>Join creators turning social content into search-ready brand opportunities.</p>
+          <button class="btn btn-primary" type="button" data-page-link="checkout">Get Your Site Now <span aria-hidden="true">-&gt;</span></button>
+        </section>
+      </section>
+
+      <section class="page" id="checkout" data-page="checkout" aria-labelledby="checkout-title">
+        <section class="checkout-hero framed pink-frame">
+          <p class="eyebrow"><span></span>Secure Checkout</p>
+          <h1 id="checkout-title">Complete your <em>order.</em></h1>
+          <p>Choose your plan and submit your order request. Stripe Payment Links can be added when you are ready to accept instant payments.</p>
+        </section>
+
+        <section class="checkout-layout framed purple-frame">
+          <div class="checkout-plans">
+            <p class="eyebrow"><span></span>Select Your Package</p>
+            <div class="checkout-plan-list" data-checkout-plans=""><button type="button" class="checkout-plan is-selected" data-checkout-plan="Starter" style="--plan-color: #168dff;">
+      <span>Starter</span>
+      <b>$999 <small>/year</small></b>
+      <em>Total Value <strong class="strike-value">$5,240</strong></em>
+    </button><button type="button" class="checkout-plan" data-checkout-plan="Growth" style="--plan-color: #b640ff;">
+      <span>Growth</span>
+      <b>$1,999 <small>/year</small></b>
+      <em>Total Value <strong class="strike-value">$6,450</strong></em>
+    </button><button type="button" class="checkout-plan" data-checkout-plan="Brand" style="--plan-color: #ff006a;">
+      <span>Brand</span>
+      <b>$2,999 <small>/year</small></b>
+      <em>Total Value <strong class="strike-value">$7,950</strong></em>
+    </button></div>
+            <p class="checkout-note">The free preview starts from your Instagram or TikTok handle. Paid plans unlock the full creator media kit.</p>
+          </div>
+
+          <form class="checkout-card" name="creator-order" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-checkout-form="">
+            <input type="hidden" name="form-name" value="creator-order">
+            <input type="hidden" name="selectedPlan" value="Free Preview" data-selected-plan-input="">
+            <p class="hidden-field" aria-hidden="true"><label>Do not fill this out <input name="bot-field" tabindex="-1"></label></p>
+            <div class="section-title-row">
+              <h2>Start your order</h2>
+              <span>Free preview ready</span>
+            </div>
+            <label><span>Full Name *</span><input name="name" autocomplete="name" placeholder="Jane Doe" required=""></label>
+            <label><span>Email Address *</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required=""></label>
+            <label><span>Instagram or TikTok Handle *</span><input name="creatorHandle" placeholder="@yourhandle" required=""></label>
+            <label><span>Niche *</span><select name="niche" required=""><option value="">Select a niche</option><option>Beauty</option><option>Finance</option><option>Health</option><option>Fitness</option><option>Technology</option><option>Education</option></select></label>
+            <label><span>Profile Role *</span><select name="profileRole" required=""><option value="">Select a role</option><option>Creator</option><option>Spectator</option><option>Critic</option></select></label>
+            <div class="checkout-two">
+              <label><span>Phone</span><input name="phone" autocomplete="tel" placeholder="(555) 555-5555"></label>
+              <label><span>Best Start Date</span><input name="startDate" type="date"></label>
+            </div>
+            <label><span>Location *</span><select name="location" required=""><option value="">Select a broad location</option><option>USA</option><option>Europe</option><option>Asia</option><option>Africa</option><option>Other</option></select></label>
+            <label><span>Notes</span><textarea name="message" placeholder="Tell us what kind of creator site you want to launch."></textarea></label>
+
+            <div class="order-summary" data-order-summary="">
+      <div><span>Selected Plan</span><b>Free Preview</b></div>
+      <div><span>Preview Type</span><strong>No payment required</strong></div>
+    </div>
+
+            <div class="preferred-pay">
+              <b>Preview first</b>
+              <span>Request the limited preview free, then upgrade when you are ready for the full $999 creator site.</span>
+            </div>
+            <button class="btn btn-primary checkout-pay" type="submit">Submit Preview Request <span data-checkout-price=""></span> <span aria-hidden="true">-&gt;</span></button>
+            <div class="split-payments" aria-label="Split payment options">
+              <span>Or offer payment breakdown options with</span>
+              <div class="payment-logos">
+                <span class="pay-logo afterpay">afterpay</span>
+                <span class="pay-logo affirm">affirm</span>
+                <span class="pay-logo klarna">Klarna.</span>
+              </div>
+            </div>
+            <p class="checkout-status" role="status" aria-live="polite"></p>
+            <p class="checkout-disclaimer">This order form is wired for Netlify Forms. To take instant payment, add Stripe Payment Links in the site settings block inside the script.</p>
+          </form>
+        </section>
+      </section>
+
+      <section class="page" id="terms" data-page="terms" aria-labelledby="terms-title">
+        <section class="terms-hero framed purple-frame">
+          <p class="eyebrow"><span></span>What Is Included</p>
+          <h1 id="terms-title">Built for <em>brand opportunities.</em></h1>
+          <p>Profile Posts+ is not just a link page. It is a managed creator website system built to keep you visible across search engines, AI search, Instagram, TikTok, and brand discovery workflows over time.</p>
+        </section>
+
+        <section class="terms-grid framed green-frame">
+          <article>
+            <h2>No Contract. No Monthly Platform Fee.</h2>
+            <p>Your first year includes hosting, domain setup support, SSL, SEO setup, AI/search discoverability structure, analytics dashboard setup, content sync, contact forms, updates, support, and account management.</p>
+          </article>
+          <article>
+            <h2>Automatic 6-Hour Updates</h2>
+            <p>Your website updates connected content every 6 hours through Elfsight. You do not have to rebuild pages, upload posts manually, or keep editing your profile after every post.</p>
+          </article>
+          <article>
+            <h2>Search + AI Discoverability</h2>
+            <p>We structure your profile so brands can find you outside Instagram and TikTok, including search engines and AI discovery tools. SEO, backlinks, indexing, and profile structure help keep you visible over time.</p>
+          </article>
+          <article>
+            <h2>Privacy Promise</h2>
+            <p>We do not sell client data. Contact form details, account information, and connected profile information are used to operate and support the website system.</p>
+          </article>
+        </section>
+
+        <section class="terms-breakdown framed orange-frame">
+          <div>
+            <h2>Real Market Value</h2>
+            <p>A creator would often pay an agency $5,000 to $8,000 for a built, hosted, managed creator website system with live feeds, analytics, SEO, and support. Starter keeps that same value simple at $999 for the first year.</p>
+          </div>
+          <div class="terms-table">
+            <div><span>Creator Website System</span><b class="strike-value">$1,200</b></div>
+            <div><span>RevU Kit Feed Integrations</span><b class="strike-value">$600</b></div>
+            <div><span>Mobile Optimization</span><b class="strike-value">$450</b></div>
+            <div><span>Analytics Dashboard</span><b class="strike-value">$650</b></div>
+            <div><span>AI/Search Discoverability</span><b class="strike-value">$500</b></div>
+            <div><span>Setup + Onboarding</span><b class="strike-value">$450</b></div>
+            <div><span>Hosting + Maintenance</span><b class="strike-value">$690</b></div>
+            <div><span>Contact &amp; Inquiry System</span><b class="strike-value">$300</b></div>
+            <div><span>Content Sync System</span><b class="strike-value">$400</b></div>
+            <strong>Total Value: <em class="strike-value">$5,240</em></strong>
+          </div>
+        </section>
+
+        <section class="terms-grid framed cyan-frame">
+          <article>
+            <h2>30-Day Guarantee</h2>
+            <p>You have a 30-day guarantee. Because setup services and platform work are paid upfront, $499 is refundable if you cancel inside the guarantee window.</p>
+          </article>
+          <article>
+            <h2>Cancellation + Domain Ownership</h2>
+            <p>If you cancel, you still own your domain. We will transfer the domain to you so you keep control of your creator presence.</p>
+          </article>
+          <article>
+            <h2>Year Two Renewal</h2>
+            <p>Renewal is expected to be $699 per year for continued hosting, maintenance, updates, support, SEO care, and content syncing. Klarna, Afterpay, and Affirm payment breakdown options will be offered when available.</p>
+          </article>
+          <article>
+            <h2>Contact Forms Included</h2>
+            <p>Your site includes inquiry forms so brands, partners, and collaborators can contact you directly without sending people through social media DMs only.</p>
+          </article>
+        </section>
+
+        <section class="bottom-cta framed pink-frame">
+          <h2>Be found beyond <em>social.</em></h2>
+          <p>Profile Posts+ keeps your creator brand visible beyond the feed, beyond the algorithm, and beyond one platform.</p>
+          <button class="btn btn-primary" type="button" data-page-link="checkout">Get Your Site Now <span aria-hidden="true">-&gt;</span></button>
+          <button class="btn btn-outline" type="button" data-open-contact="">Ask a Question <span aria-hidden="true">-&gt;</span></button>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+const state = {
+  activePage: "home",
+  activeFilter: "instagram",
+  visiblePosts: 16,
+  selectedPlan: "Free Preview",
+  previewHandle: "",
+};
+
+const siteSettings = {
+  previewEndpoint: "/.netlify/functions/create-preview",
+  stripePaymentLinks: {
+    "Free Preview": "",
+    Starter: "",
+    Growth: "",
+    Brand: "",
+  },
+};
+
+const previewStats = {
+  instagram: [
+    ["IG", "18.7K", "1.6K"],
+    ["IG", "32.4K", "1.8K"],
+    ["IG", "26.8K", "2.4K"],
+  ],
+  tiktok: [
+    ["TT", "23.1K", "2.1K"],
+    ["TT", "22.8K", "3.2K"],
+    ["TT", "24.6K", "2.2K"],
+  ],
+};
+
+const portraitColors = [
+  "radial-gradient(circle at 54% 22%, #ffd5bd 0 8%, transparent 9%), radial-gradient(circle at 60% 26%, rgba(255,255,255,.24), transparent 7%), linear-gradient(115deg, #15090b, #8a4b2d 28%, #171018 29% 55%, #d79058 56% 78%, #211014 79% 100%)",
+  "radial-gradient(circle at 48% 23%, #ffc7a3 0 8%, transparent 9%), radial-gradient(circle at 42% 28%, rgba(255,255,255,.18), transparent 8%), linear-gradient(95deg, #120b11, #b06943 32%, #1d1111 33% 58%, #f0a067 59% 80%, #111 81% 100%)",
+  "radial-gradient(circle at 52% 22%, #e5a07d 0 8%, transparent 9%), radial-gradient(circle at 62% 30%, rgba(255,0,106,.28), transparent 10%), linear-gradient(120deg, #09070a, #562818 26%, #df935b 27% 54%, #151016 55% 100%)",
+  "radial-gradient(circle at 50% 21%, #ffd2b4 0 8%, transparent 9%), radial-gradient(circle at 74% 20%, rgba(25,237,255,.18), transparent 10%), linear-gradient(105deg, #08080d, #c27545 35%, #211014 36% 64%, #86451f 65% 100%)"
+];
+
+const posts = Array.from({ length: 28 }, (_, index) => {
+  const platform = index % 3 === 0 ? "tiktok" : "instagram";
+  const views = [23.1, 18.7, 32.4, 22.8, 26.8, 21.6, 17.3, 19.8, 22.2, 24.6, 31.2, 16.8, 20.9, 20.3, 27.5, 14.8, 29.1, 18.1, 33.4, 25.7, 28.2, 15.5, 30.8, 19.4, 34.6, 21.9, 26.2, 23.8][index];
+  const likes = [2.1, 1.6, 1.8, 3.2, 2.4, 1.8, 1.3, 1.5, 1.7, 2.2, 2.8, 1.2, 1.6, 1.6, 2.5, 1.1, 2.6, 1.4, 3.1, 2.2, 2.4, 1.1, 2.9, 1.7, 3.3, 1.8, 2.3, 2.0][index];
+  return {
+    platform,
+    views: `${views}K`,
+    likes: `${likes}K`,
+    portrait: portraitColors[index % portraitColors.length],
+  };
+});
+
+const metrics = [
+  ["users", "352K", "Total Followers", "+12.5% vs last 30 days"],
+  ["heart", "12.8M", "Total Likes", "+8.3% vs last 30 days"],
+  ["chart", "8.7%", "Engagement Rate", "+1.2% vs last 30 days"],
+  ["eye", "1.2M", "Profile Views", "+15.7% vs last 30 days"],
+  ["arrow", "245K", "Monthly Reach", "+10.4% vs last 30 days"],
+];
+
+const plans = [
+  {
+    name: "Free Preview",
+    color: "#19edff",
+    desc: "A limited profile preview before you commit.",
+    value: "$299",
+    price: "",
+    billing: "Preview included",
+    cta: "Start Free Preview",
+    frontDoor: true,
+    items: ["One sample profile image", "Three sample posts", "Niche, role, and location choices", "Upgrade path to full $999 site"],
+  },
+  {
+    name: "Starter",
+    color: "#168dff",
+    desc: "Perfect for creators getting started.",
+    value: "$5,240",
+    price: "$999",
+    billing: "/year",
+    cta: "Choose Starter",
+    popular: true,
+    items: ["Everything in Value Stack", "Up to 20 Profile Posts", "6-hour automatic updates", "SEO + AI discoverability", "Analytics Dashboard", "Hosting + support included"],
+  },
+  {
+    name: "Growth",
+    color: "#b640ff",
+    desc: "Built for creators ready to grow.",
+    value: "$6,450",
+    price: "$1,999",
+    billing: "/year",
+    cta: "Choose Growth",
+    items: ["Everything in Starter", "Up to 40 Profile Posts", "Advanced Analytics + Reports", "Priority Email Support", "Custom Link in Bio", "Enhanced discoverability setup"],
+  },
+  {
+    name: "Brand",
+    color: "#ff006a",
+    desc: "For creators ready for pro brand outreach.",
+    value: "$7,950",
+    price: "$2,999",
+    billing: "/year",
+    cta: "Choose Brand",
+    items: ["Everything in Growth", "Up to 80 Profile Posts", "Dedicated Success Manager", "Custom Branding Options", "Premium integration support", "Brand opportunity positioning"],
+  },
+];
+
+const valueItems = [
+  ["KIT", "Creator Website System", "$1,200"],
+  ["SOC", "RevU Kit Feed Integrations", "$600"],
+  ["MOB", "Mobile Optimization", "$450"],
+  ["DASH", "Analytics Dashboard", "$650"],
+  ["AI", "AI / Search Discoverability", "$500"],
+  ["SET", "Setup + Onboarding", "$450"],
+  ["HOST", "Hosting + Maintenance", "$690"],
+  ["FORM", "Contact & Inquiry System", "$300"],
+  ["SYNC", "Content Sync System", "$400"],
+];
+
+const countries = [
+  ["USA", 42],
+  ["Europe", 24],
+  ["Asia", 18],
+  ["Africa", 10],
+  ["Other", 6],
+];
+
+const iconPaths = {
+  refresh: '<path d="M4 12a8 8 0 0 1 13.7-5.7"/><path d="M18 3v5h-5"/><path d="M20 12a8 8 0 0 1-13.7 5.7"/><path d="M6 21v-5h5"/>',
+  shield: '<path d="M12 3 20 6v6c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V6l8-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/>',
+  screen: '<rect x="4" y="5" width="16" height="11" rx="2"/><path d="M9 20h6"/><path d="M12 16v4"/>',
+  lock: '<rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>',
+  users: '<path d="M16 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.3a4 4 0 0 1 0 7.4"/>',
+  eye: '<path d="M2 12s3.8-7 10-7 10 7 10 7-3.8 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>',
+  chart: '<path d="M4 19V5"/><path d="M4 19h16"/><path d="m7 15 4-4 3 3 5-7"/>',
+  bars: '<path d="M5 20V10"/><path d="M12 20V4"/><path d="M19 20v-7"/>',
+  star: '<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.2l-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/>',
+  bolt: '<path d="M13 2 4 14h7l-1 8 10-13h-7l1-7Z"/>',
+  support: '<path d="M4 13a8 8 0 0 1 16 0"/><path d="M4 13v3a2 2 0 0 0 2 2h1v-7H6a2 2 0 0 0-2 2Z"/><path d="M20 13v3a2 2 0 0 1-2 2h-1v-7h1a2 2 0 0 1 2 2Z"/><path d="M14 20h-4"/>',
+  award: '<circle cx="12" cy="8" r="5"/><path d="m8.5 12.5-1.5 8 5-3 5 3-1.5-8"/>',
+  user: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+  handshake: '<path d="m8 12 3 3a2 2 0 0 0 3 0l4-4"/><path d="m2 12 4-4 4 4"/><path d="m22 12-4-4-4 4"/><path d="M6 8l5-3 4 3"/>',
+  heart: '<path d="M20.8 5.6a5.2 5.2 0 0 0-7.4 0L12 7l-1.4-1.4a5.2 5.2 0 1 0-7.4 7.4L12 21l8.8-8a5.2 5.2 0 0 0 0-7.4Z"/>',
+  globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a13 13 0 0 1 0 18"/><path d="M12 3a13 13 0 0 0 0 18"/>',
+  puzzle: '<path d="M8 4h8v5h2a2 2 0 1 1 0 4h-2v7H8v-3a2 2 0 1 0 0-4V4Z"/>',
+  gift: '<rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13"/><path d="M3 12h18"/><path d="M7.5 8A2.5 2.5 0 1 1 12 6a2.5 2.5 0 1 1 4.5 2"/>',
+  phone: '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/>',
+  arrow: '<path d="M5 12h14"/><path d="m13 5 7 7-7 7"/>',
+  set: '<path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/><circle cx="8" cy="7" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="17" r="2"/>',
+  sync: '<path d="M4 12a8 8 0 0 1 13.7-5.7"/><path d="M18 3v5h-5"/><path d="M20 12a8 8 0 0 1-13.7 5.7"/><path d="M6 21v-5h5"/>',
+  contract: '<path d="M7 3h8l4 4v14H7V3Z"/><path d="M15 3v5h4"/><path d="M10 12h6"/><path d="M10 16h5"/>',
+  inclusive: '<rect x="4" y="6" width="16" height="12" rx="2"/><path d="M16 6v12"/><circle cx="16" cy="6" r="3"/>',
+  discover: '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/><path d="M10.5 7v7"/><path d="M7 10.5h7"/>',
+  calendar: '<rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4"/><path d="M16 3v4"/><path d="M4 10h16"/><path d="M9 15h6"/>',
+  trend: '<path d="M4 18h16"/><path d="m5 15 5-5 4 3 5-7"/><path d="M15 6h4v4"/>',
+  spark: '<path d="M12 2 14.6 9.4 22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6L12 2Z"/>',
+};
+
+function iconSvg(name) {
+  const paths = iconPaths[name] || iconPaths.star;
+  return `<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">${paths}</svg>`;
+}
+
+function setPortraitVars() {
+  document.documentElement.style.setProperty("--portrait", portraitColors[0]);
+  document.querySelectorAll(".post-card, .collab-row i").forEach((el, index) => {
+    el.style.setProperty("--portrait", portraitColors[index % portraitColors.length]);
+  });
+}
+
+function createPostCard(post, compact = false) {
+  const card = document.createElement("article");
+  card.className = "post-card";
+  card.dataset.platform = post.platform;
+  card.style.setProperty("--portrait", post.portrait);
+  card.innerHTML = `
+    <small aria-label="${post.platform}">${post.platform === "instagram" ? "IG" : "TT"}</small>
+    <b>${post.views}</b>
+    <b>${post.likes}</b>
+  `;
+  return card;
+}
+
+function renderPosts() {
+  const filtered = state.activeFilter === "all"
+    ? posts
+    : posts.filter((post) => post.platform === state.activeFilter);
+  const visible = filtered.slice(0, 16);
+  const grid = document.querySelector("[data-post-grid]");
+  const featured = document.querySelector("[data-featured-posts]");
+  const topPosts = document.querySelector("[data-top-posts]");
+  const thumbs = document.querySelector(".thumb-row");
+
+  if (grid) {
+    grid.replaceChildren(...visible.map((post) => createPostCard(post)));
+  }
+  if (featured) {
+    featured.replaceChildren(...filtered.slice(0, 4).map((post) => createPostCard(post)));
+  }
+  if (topPosts) {
+    topPosts.replaceChildren(...posts.slice(2, 10).map((post) => createPostCard(post)));
+  }
+  if (thumbs) {
+    thumbs.replaceChildren(...posts.slice(0, 3).map((post) => createPostCard(post, true)));
+  }
+
+  const count = document.querySelector("[data-post-count]");
+  if (count) count.textContent = "4 Posts / 16 Reels";
+}
+
+function renderBars() {
+  document.querySelectorAll(".bars").forEach((container) => {
+    container.replaceChildren(...countries.map(([country, value]) => {
+      const row = document.createElement("div");
+      row.className = "bar-row";
+      row.innerHTML = `<span>${country}</span><i style="width:${value}%"></i><b>${value}%</b>`;
+      return row;
+    }));
+  });
+}
+
+function renderCollabs() {
+  document.querySelectorAll(".collabs").forEach((container) => {
+    const names = ["Fashion Brand", "Skincare Co.", "Wellness Brand"];
+    container.replaceChildren(...names.map((name, index) => {
+      const row = document.createElement("div");
+      row.className = "collab-row";
+      row.innerHTML = `<i></i><div><b>${name}</b><span>Paid Partnership</span></div>`;
+      row.querySelector("i").style.setProperty("--portrait", portraitColors[index + 1]);
+      return row;
+    }));
+  });
+}
+
+function renderMetrics() {
+  const bar = document.querySelector(".metric-bar");
+  if (!bar) return;
+  bar.replaceChildren(...metrics.map(([icon, number, label, change]) => {
+    const card = document.createElement("article");
+    card.className = "metric-card";
+    card.innerHTML = `<i data-icon="${icon}"></i><div class="metric-main"><strong>${number}</strong><span>${label}</span></div><small>${change}</small>`;
+    return card;
+  }));
+}
+
+function renderPlans() {
+  const container = document.querySelector(".pricing-cards");
+  if (!container) return;
+  container.replaceChildren(...plans.filter((plan) => !plan.frontDoor).map((plan) => {
+    const card = document.createElement("article");
+    card.className = `plan-card${plan.popular ? " popular" : ""}`;
+    card.style.setProperty("--plan-color", plan.color);
+    card.innerHTML = `
+      <h2>${plan.name}</h2>
+      <p>${plan.desc}</p>
+      <div class="value">Total Value: <span class="strike-value">${plan.value}</span></div>
+      <div class="price">${plan.price} <small>${plan.billing}</small></div>
+      <b>${plan.name === "Free Preview" ? "Limited preview. No payment today." : "One payment. One year."}</b>
+      <ul>${plan.items.map((item) => `<li>${item}</li>`).join("")}</ul>
+      <button class="btn" type="button" data-plan="${plan.name}">${plan.cta} <span aria-hidden="true">-></span></button>
+    `;
+    return card;
+  }));
+}
+
+function renderCheckoutPlans() {
+  const container = document.querySelector("[data-checkout-plans]");
+  if (!container) return;
+  container.replaceChildren(...plans.filter((plan) => !plan.frontDoor).map((plan) => {
+    const card = document.createElement("button");
+    card.type = "button";
+    card.className = `checkout-plan${plan.name === state.selectedPlan ? " is-selected" : ""}`;
+    card.dataset.checkoutPlan = plan.name;
+    card.style.setProperty("--plan-color", plan.color);
+    card.innerHTML = `
+      <span>${plan.name}</span>
+      <b>${plan.price} <small>${plan.billing}</small></b>
+      <em>Total Value <strong class="strike-value">${plan.value}</strong></em>
+    `;
+    return card;
+  }));
+}
+
+function updateCheckoutSummary() {
+  const selected = plans.find((plan) => plan.name === state.selectedPlan) || plans[0];
+  const isPreview = selected.frontDoor;
+  const priceLabel = isPreview ? "" : `${selected.price} ${selected.billing}`;
+  document.querySelectorAll("[data-checkout-plan]").forEach((button) => {
+    button.classList.toggle("is-selected", button.dataset.checkoutPlan === selected.name);
+  });
+  const selectedPlanInput = document.querySelector("[data-selected-plan-input]");
+  if (selectedPlanInput) selectedPlanInput.value = selected.name;
+  const summary = document.querySelector("[data-order-summary]");
+  if (summary) {
+    summary.innerHTML = isPreview
+      ? `
+        <div><span>Selected Offer</span><b>Free Preview</b></div>
+        <div><span>Payment</span><strong>No payment required</strong></div>
+      `
+      : `
+        <div><span>Selected Plan</span><b>${selected.name}</b></div>
+        <div><span>Total Due Today</span><strong>${priceLabel}</strong></div>
+      `;
+  }
+  const price = document.querySelector("[data-checkout-price]");
+  if (price) price.textContent = priceLabel;
+  const preferred = document.querySelector("[data-preferred-price]");
+  if (preferred) preferred.textContent = selected.price;
+}
+
+function choosePlan(planName, openCheckout = true) {
+  state.selectedPlan = planName;
+  const select = document.querySelector('select[name="package"]');
+  if (select) select.value = planName;
+  renderCheckoutPlans();
+  updateCheckoutSummary();
+  if (openCheckout) showPage("checkout");
+}
+
+function renderValueStack() {
+  const list = document.querySelector(".value-stack ul");
+  if (!list) return;
+  list.innerHTML = valueItems.map(([icon, label, price]) => `<li><span>${icon}</span><span>${label}</span><b class="strike-value">${price}</b></li>`).join("");
+}
+
+function applyIcons() {
+  document.querySelectorAll("[data-icon]").forEach((el) => {
+    el.innerHTML = iconSvg(el.dataset.icon);
+  });
+}
+
+function showToast(message) {
+  const toast = document.querySelector(".toast");
+  toast.textContent = message;
+  toast.classList.add("is-visible");
+  clearTimeout(showToast.timeout);
+  showToast.timeout = setTimeout(() => toast.classList.remove("is-visible"), 3400);
+}
+
+function showPage(pageName, updateHash = true) {
+  state.activePage = pageName;
+  document.querySelectorAll("[data-page]").forEach((page) => {
+    page.classList.toggle("is-active", page.dataset.page === pageName);
+  });
+  document.querySelectorAll("[data-page-link]").forEach((link) => {
+    link.classList.toggle("is-active", link.dataset.pageLink === pageName);
+  });
+  document.querySelector(".main-nav").classList.remove("is-open");
+  document.querySelector(".menu-toggle").setAttribute("aria-expanded", "false");
+  if (updateHash) {
+    if (isSingleLocationSite()) {
+      history.pushState(null, "", pageName === "home" ? location.pathname : `#${pageName}`);
+    } else {
+      const routes = {
+        home: "index.html",
+        demo: "demo.html",
+        analytics: "analytics.html",
+        pricing: "pricing.html",
+        checkout: "index.html#checkout",
+        terms: "index.html#terms",
+      };
+      history.pushState(null, "", routes[pageName] || "index.html");
+    }
+  }
+  if (window.matchMedia("(max-width: 860px)").matches) {
+    document.querySelector(`[data-page="${pageName}"]`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  } else {
+    window.scrollTo({ top: 0, behavior: "auto" });
+    setTimeout(() => window.scrollTo({ top: 0, behavior: "auto" }), 0);
+  }
+}
+
+function normalizeHandle(value) {
+  return value.trim().replace(/^@+/, "").replace(/\s+/g, "").slice(0, 40);
+}
+
+function titleFromHandle(handle) {
+  return handle
+    .split(/[._-]+/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ") || "Your Preview";
+}
+
+function setPreviewStatus(mode, title, detail) {
+  const status = document.querySelector("[data-preview-status]");
+  if (!status) return;
+  status.classList.add("is-visible");
+  status.classList.toggle("is-ready", mode === "ready");
+  status.innerHTML = `<div><b>${title}</b><small>${detail}</small></div>`;
+}
+
+function setPreviewPlatform(platform) {
+  const selected = platform === "tiktok" ? "tiktok" : "instagram";
+  document.querySelectorAll("[data-preview-platform]").forEach((button) => {
+    button.classList.toggle("is-selected", button.dataset.previewPlatform === selected);
+  });
+  const input = document.querySelector("[data-preview-platform-input]");
+  if (input) input.value = selected;
+  return selected;
+}
+
+function renderPreviewPosts(platform) {
+  const rows = previewStats[platform] || previewStats.instagram;
+  const thumbs = document.querySelector(".thumb-row");
+  if (!thumbs) return;
+  thumbs.replaceChildren(...rows.map(([label, views, likes], index) => {
+    const card = document.createElement("article");
+    card.className = "post-card";
+    card.dataset.platform = label === "TT" ? "tiktok" : "instagram";
+    card.style.setProperty("--portrait", portraitColors[index % portraitColors.length]);
+    card.innerHTML = `<small aria-label="${card.dataset.platform}">${label}</small><b>${views}</b><b>${likes}</b>`;
+    return card;
+  }));
+}
+
+function renderApiPreviewPosts(posts, platform) {
+  const thumbs = document.querySelector(".thumb-row");
+  if (!thumbs) return;
+  const fallback = previewStats[platform] || previewStats.instagram;
+  const rows = posts.length ? posts : fallback.map(([label, views, likes]) => ({ label, views, likes }));
+
+  thumbs.replaceChildren(...rows.slice(0, 3).map((post, index) => {
+    const label = post.label || (platform === "tiktok" ? "TT" : "IG");
+    const card = document.createElement("article");
+    card.className = "post-card";
+    card.dataset.platform = platform;
+    if (post.image) {
+      card.style.setProperty("--portrait", `linear-gradient(0deg, rgba(0,0,0,.34), rgba(0,0,0,.08)), url("${post.image}")`);
+    } else {
+      card.style.setProperty("--portrait", portraitColors[index % portraitColors.length]);
+    }
+    card.innerHTML = `<small aria-label="${platform}">${label}</small><b>${post.views || ""}</b><b>${post.likes || ""}</b>`;
+    return card;
+  }));
+}
+
+function applyPreviewData(data, handle, platform) {
+  const cleanHandle = normalizeHandle(data?.profile?.username || handle);
+  const displayHandle = data?.profile?.handle || `@${cleanHandle}`;
+  const previewName = data?.profile?.displayName || titleFromHandle(cleanHandle);
+  const selectedPlatform = setPreviewPlatform(data?.profile?.platform || platform);
+
+  state.previewHandle = cleanHandle;
+
+  document.querySelectorAll("[data-preview-name], [data-preview-nav]").forEach((el) => {
+    el.innerHTML = `${previewName} <span></span>`;
+  });
+  document.querySelectorAll("[data-preview-handle]").forEach((el) => {
+    el.textContent = displayHandle;
+  });
+
+  const avatar = document.querySelector(".avatar");
+  if (avatar && data?.profile?.avatar) {
+    avatar.style.setProperty("--portrait", `url("${data.profile.avatar}")`);
+  }
+
+  const platformLabel = selectedPlatform === "tiktok" ? "TikTok" : "Instagram";
+  const headline = document.querySelector("[data-preview-headline]");
+  if (headline) headline.textContent = `${platformLabel} preview for ${displayHandle} is ready to become a brand-ready profile.`;
+
+  renderApiPreviewPosts(data?.posts || [], selectedPlatform);
+
+  document.querySelectorAll('input[name="creatorHandle"], input[name="instagram"], input[name="tiktok"]').forEach((input) => {
+    if (!input.value) input.value = displayHandle;
+  });
+
+  return true;
+}
+
+async function fetchPreviewData(handle, platform) {
+  if (!siteSettings.previewEndpoint) return null;
+  const response = await fetch(siteSettings.previewEndpoint, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ handle, platform }),
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.ok) {
+    throw new Error(data.error || "Preview API returned no posts.");
+  }
+  return data;
+}
+
+function updatePreviewFromHandle(handle, platform = "instagram") {
+  const cleanHandle = normalizeHandle(handle);
+  if (!cleanHandle) return false;
+
+  const selectedPlatform = setPreviewPlatform(platform);
+  state.previewHandle = cleanHandle;
+  const displayHandle = `@${cleanHandle}`;
+  const previewName = titleFromHandle(cleanHandle);
+
+  document.querySelectorAll("[data-preview-name], [data-preview-nav]").forEach((el) => {
+    el.innerHTML = `${previewName} <span></span>`;
+  });
+  document.querySelectorAll("[data-preview-handle]").forEach((el) => {
+    el.textContent = displayHandle;
+  });
+  const platformLabel = selectedPlatform === "tiktok" ? "TikTok" : "Instagram";
+  const headline = document.querySelector("[data-preview-headline]");
+  if (headline) headline.textContent = `${platformLabel} preview for ${displayHandle} is ready to become a brand-ready profile.`;
+  renderPreviewPosts(selectedPlatform);
+
+  document.querySelectorAll('input[name="creatorHandle"], input[name="instagram"], input[name="tiktok"]').forEach((input) => {
+    if (!input.value) input.value = displayHandle;
+  });
+
+  return true;
+}
+
+function startPreview(handle, platform) {
+  const cleanHandle = normalizeHandle(handle);
+  if (!cleanHandle) {
+    showToast("Enter your Instagram or TikTok handle first.");
+    return;
+  }
+
+  const laptop = document.querySelector(".creator-laptop");
+  laptop?.classList.add("is-loading");
+  laptop?.classList.remove("is-ready");
+  laptop?.scrollIntoView({ behavior: "smooth", block: "center" });
+  setPreviewStatus("loading", "Building preview", "Checking the handle and preparing three preview posts.");
+
+  Promise.resolve()
+    .then(() => fetchPreviewData(cleanHandle, platform))
+    .then((data) => {
+      if (data) {
+        applyPreviewData(data, cleanHandle, platform);
+      } else {
+        updatePreviewFromHandle(cleanHandle, platform);
+      }
+    })
+    .catch(() => {
+      updatePreviewFromHandle(cleanHandle, platform);
+      showToast("Live posts are unavailable right now, so a limited preview was generated.");
+    })
+    .finally(() => {
+    state.selectedPlan = "Free Preview";
+    const selectedPlanInput = document.querySelector("[data-selected-plan-input]");
+    if (selectedPlanInput) selectedPlanInput.value = "Free Preview";
+    updateCheckoutSummary();
+    laptop?.classList.remove("is-loading");
+    laptop?.classList.add("is-ready");
+    setPreviewStatus("ready", "Preview ready", `Your limited profile for @${state.previewHandle} is ready.`);
+    showToast(`Preview ready for @${state.previewHandle}.`);
+  });
+}
+
+function openContact() {
+  showPage("pricing");
+  setTimeout(() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
+}
+
+function connectAccounts() {
+  showPage("pricing");
+  setTimeout(() => {
+    const form = document.querySelector("[data-contact-form]");
+    form?.querySelector('textarea[name="message"]')?.focus();
+    form?.querySelector('textarea[name="message"]')?.setAttribute("placeholder", "Tell us the Instagram and TikTok accounts you want connected.");
+  }, 120);
+  showToast("Tell us which social accounts to connect and we will start setup.");
+}
+
+async function submitNetlifyForm(form, statusSelector, successMessage) {
+  const status = form.querySelector(statusSelector);
+  if (status) status.textContent = "Sending...";
+
+  const body = new URLSearchParams(new FormData(form));
+
+  try {
+    const response = await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: body.toString(),
+    });
+
+    if (!response.ok) throw new Error("Form submission failed");
+
+    form.reset();
+    if (status) status.textContent = successMessage;
+    showToast(successMessage);
+    updateCheckoutSummary();
+  } catch (error) {
+    if (status) status.textContent = "We could not send this from your browser. Please email support or try again.";
+    showToast("Submission could not be sent. Please try again.");
+  }
+}
+
+function wireEvents() {
+  document.addEventListener("click", (event) => {
+    const pageLink = event.target.closest("[data-page-link]");
+    const scrollTarget = event.target.closest("[data-scroll-target]");
+    const filter = event.target.closest("[data-filter]");
+    const plan = event.target.closest("[data-plan]");
+    const focusPreview = event.target.closest("[data-focus-preview]");
+    const previewPlatform = event.target.closest("[data-preview-platform]");
+
+    if (pageLink) {
+      event.preventDefault();
+      showPage(pageLink.dataset.pageLink);
+    }
+
+    if (scrollTarget) {
+      event.preventDefault();
+      const targetId = scrollTarget.dataset.scrollTarget;
+      if (targetId === "terms") {
+        showPage("terms");
+      } else if (state.activePage !== "home") {
+        showPage("home");
+      }
+      setTimeout(() => document.querySelector(`#${targetId}`)?.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
+    }
+
+    if (filter) {
+      state.activeFilter = filter.dataset.filter;
+      document.querySelectorAll("[data-filter]").forEach((button) => button.classList.remove("is-selected", "btn-primary"));
+      document.querySelectorAll("[data-filter]").forEach((button) => button.classList.add("btn-outline"));
+      filter.classList.add("is-selected", "btn-primary");
+      filter.classList.remove("btn-outline");
+      renderPosts();
+    }
+
+    if (previewPlatform) {
+      event.preventDefault();
+      setPreviewPlatform(previewPlatform.dataset.previewPlatform);
+    }
+
+    if (event.target.closest("[data-open-contact]")) {
+      openContact();
+    }
+
+    if (event.target.closest("[data-connect-accounts]")) {
+      connectAccounts();
+    }
+
+    if (event.target.closest("[data-social]")) {
+      const social = event.target.closest("[data-social]").dataset.social;
+      openContact();
+      showToast(`Add your ${social} handle and we will connect it during setup.`);
+    }
+
+    if (focusPreview) {
+      event.preventDefault();
+      const input = document.querySelector('[data-preview-form] input[name="previewHandle"]');
+      input?.focus();
+      input?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    if (plan) {
+      choosePlan(plan.dataset.plan);
+      showToast(`${plan.dataset.plan} selected. Checkout is ready.`);
+    }
+
+    const checkoutPlan = event.target.closest("[data-checkout-plan]");
+    if (checkoutPlan) {
+      choosePlan(checkoutPlan.dataset.checkoutPlan, false);
+      showToast(`${checkoutPlan.dataset.checkoutPlan} selected.`);
+    }
+  });
+
+  document.querySelector(".menu-toggle").addEventListener("click", () => {
+    const nav = document.querySelector(".main-nav");
+    const isOpen = nav.classList.toggle("is-open");
+    document.querySelector(".menu-toggle").setAttribute("aria-expanded", String(isOpen));
+  });
+
+  document.querySelector("[data-preview-form]")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+    startPreview(data.previewHandle || "", data.platform || "instagram");
+  });
+
+  document.querySelector("[data-contact-form]")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+    submitNetlifyForm(form, ".form-status", `Thanks, ${data.name}. Your ${data.package} inquiry was sent.`);
+  });
+
+  document.querySelector("[data-checkout-form]")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const selected = plans.find((plan) => plan.name === state.selectedPlan) || plans[0];
+    const paymentLink = siteSettings.stripePaymentLinks[selected.name];
+    if (paymentLink) {
+      window.location.href = paymentLink;
+      return;
+    }
+    submitNetlifyForm(form, ".checkout-status", `${selected.name} order request sent. We will reply with next steps.`);
+  });
+
+  window.addEventListener("popstate", () => {
+    const page = pageFromLocation();
+    if (document.querySelector(`[data-page="${page}"]`)) showPage(page, false);
+  });
+}
+
+function pageFromLocation() {
+  const file = location.pathname.split("/").pop().toLowerCase();
+  if (isSingleLocationSite()) {
+    const bundledPage = location.hash.replace("#", "");
+    if (["demo", "analytics", "pricing", "checkout", "terms"].includes(bundledPage)) return bundledPage;
+    if (file === "demo.html") return "demo";
+    if (file === "analytics.html") return "analytics";
+    if (file === "pricing.html") return "pricing";
+    if (file === "terms.html") return "terms";
+    return "home";
+  }
+  if (file === "demo.html") return "demo";
+  if (file === "analytics.html") return "analytics";
+  if (file === "pricing.html") return "pricing";
+  const hashPage = location.hash.replace("#", "");
+  if (["home", "demo", "analytics", "pricing", "checkout", "terms"].includes(hashPage)) return hashPage;
+  return "home";
+}
+
+function isSingleLocationSite() {
+  return true;
+}
+
+function initFromHash() {
+  const initial = pageFromLocation();
+  if (document.querySelector(`[data-page="${initial}"]`)) {
+    showPage(initial, false);
+  } else {
+    showPage("home", false);
+  }
+
+  const anchor = location.hash.replace("#", "");
+  if (window.matchMedia("(max-width: 860px)").matches && ["home", "demo", "analytics", "pricing", "checkout", "terms"].includes(anchor)) {
+    setTimeout(() => document.getElementById(anchor)?.scrollIntoView({ behavior: "smooth", block: "start" }), 120);
+  }
+
+  if (anchor && !["home", "demo", "analytics", "pricing", "checkout", "terms"].includes(anchor) && document.getElementById(anchor)) {
+    setTimeout(() => document.getElementById(anchor).scrollIntoView({ behavior: "smooth", block: "start" }), 120);
+  }
+}
+
+function syncActiveNavFromScroll() {
+  if (!window.matchMedia("(max-width: 860px)").matches) return;
+  const pages = Array.from(document.querySelectorAll("[data-page]"));
+  const current = pages.reduce((best, page) => {
+    const distance = Math.abs(page.getBoundingClientRect().top - 120);
+    return !best || distance < best.distance ? { page, distance } : best;
+  }, null)?.page?.dataset.page || "home";
+  state.activePage = current;
+  document.querySelectorAll("[data-page-link]").forEach((link) => {
+    link.classList.toggle("is-active", link.dataset.pageLink === current);
+  });
+}
+
+renderPosts();
+renderBars();
+renderCollabs();
+renderMetrics();
+renderPlans();
+renderCheckoutPlans();
+updateCheckoutSummary();
+renderValueStack();
+applyIcons();
+setPortraitVars();
+wireEvents();
+initFromHash();
+window.addEventListener("scroll", syncActiveNavFromScroll, { passive: true });
+window.addEventListener("resize", syncActiveNavFromScroll);
+setTimeout(syncActiveNavFromScroll, 300);
+
+</script>
+
+
+
+
+
+</body><div id="codex-browser-sidebar-comments-root" style="position: fixed; inset: 0px; pointer-events: none; z-index: 2147483000;"></div></html>
